@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A938CC121D47D88E00B8FDEC /* gyparody.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A938CC111D47D88E00B8FDEC /* gyparody.ttf */; };
+		A938CC141D47D89700B8FDEC /* QuestionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A938CC131D47D89700B8FDEC /* QuestionData.plist */; };
+		A96A370A1D3365E70094CE4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37091D3365E70094CE4C /* AppDelegate.swift */; };
+		A96A370C1D3365E70094CE4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A370B1D3365E70094CE4C /* ViewController.swift */; };
+		A96A370F1D3365E70094CE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96A370D1D3365E70094CE4C /* Main.storyboard */; };
+		A96A37111D3365E70094CE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96A37101D3365E70094CE4C /* Assets.xcassets */; };
+		A96A37141D3365E70094CE4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96A37121D3365E70094CE4C /* LaunchScreen.storyboard */; };
+		A96A372B1D3366190094CE4C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A372A1D3366190094CE4C /* Team.swift */; };
+		A96A372D1D33662B0094CE4C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A372C1D33662B0094CE4C /* Question.swift */; };
+		A96A372F1D3366420094CE4C /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A372E1D3366420094CE4C /* GameState.swift */; };
+		A96A37311D3367040094CE4C /* JeopardyManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37301D3367040094CE4C /* JeopardyManagerTests.swift */; };
+		A96A37331D3367F70094CE4C /* GameStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37321D3367F70094CE4C /* GameStateTests.swift */; };
+		A96A37361D336A6A0094CE4C /* QuestionRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37351D336A6A0094CE4C /* QuestionRetriever.swift */; };
+		A96A37391D336C200094CE4C /* TestQuestionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96A37381D336C200094CE4C /* TestQuestionData.plist */; };
+		A96A373B1D336D230094CE4C /* QuestionRetrieverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A373A1D336D230094CE4C /* QuestionRetrieverTests.swift */; };
+		A96A373D1D3373AA0094CE4C /* JeopardyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A373C1D3373AA0094CE4C /* JeopardyManager.swift */; };
+		A96A37451D338CF10094CE4C /* TeamSetupScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96A37441D338CF10094CE4C /* TeamSetupScreen.storyboard */; };
+		A96A37471D338D160094CE4C /* TeamSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37461D338D160094CE4C /* TeamSetupViewController.swift */; };
+		A96A37491D338D250094CE4C /* AnsweringScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37481D338D250094CE4C /* AnsweringScreenViewController.swift */; };
+		A96A374B1D338D310094CE4C /* AnsweringScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96A374A1D338D310094CE4C /* AnsweringScreen.storyboard */; };
+		A96A374D1D338D400094CE4C /* VictoryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96A374C1D338D400094CE4C /* VictoryScreen.storyboard */; };
+		A96A374F1D338D550094CE4C /* VictoryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A374E1D338D550094CE4C /* VictoryScreenViewController.swift */; };
+		A96A37511D338D650094CE4C /* GameScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96A37501D338D650094CE4C /* GameScreen.storyboard */; };
+		A96A37531D338D770094CE4C /* GameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37521D338D770094CE4C /* GameScreenViewController.swift */; };
+		A96A37551D338D900094CE4C /* QuestionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37541D338D900094CE4C /* QuestionsCollectionViewController.swift */; };
+		A96A37571D338DAD0094CE4C /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A37561D338DAD0094CE4C /* QuestionCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A96A371B1D3365E80094CE4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A96A36FE1D3365E70094CE4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A96A37051D3365E70094CE4C;
+			remoteInfo = Jeopardy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A938CC111D47D88E00B8FDEC /* gyparody.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gyparody.ttf; sourceTree = "<group>"; };
+		A938CC131D47D89700B8FDEC /* QuestionData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionData.plist; sourceTree = "<group>"; };
+		A96A37061D3365E70094CE4C /* Jeopardy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeopardy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96A37091D3365E70094CE4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A96A370B1D3365E70094CE4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A96A370E1D3365E70094CE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A96A37101D3365E70094CE4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A96A37131D3365E70094CE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A96A37151D3365E70094CE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96A371A1D3365E80094CE4C /* JeopardyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JeopardyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96A37201D3365E80094CE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A96A372A1D3366190094CE4C /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		A96A372C1D33662B0094CE4C /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A96A372E1D3366420094CE4C /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		A96A37301D3367040094CE4C /* JeopardyManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeopardyManagerTests.swift; sourceTree = "<group>"; };
+		A96A37321D3367F70094CE4C /* GameStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStateTests.swift; sourceTree = "<group>"; };
+		A96A37351D336A6A0094CE4C /* QuestionRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionRetriever.swift; sourceTree = "<group>"; };
+		A96A37381D336C200094CE4C /* TestQuestionData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestQuestionData.plist; sourceTree = "<group>"; };
+		A96A373A1D336D230094CE4C /* QuestionRetrieverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionRetrieverTests.swift; sourceTree = "<group>"; };
+		A96A373C1D3373AA0094CE4C /* JeopardyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeopardyManager.swift; sourceTree = "<group>"; };
+		A96A37441D338CF10094CE4C /* TeamSetupScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TeamSetupScreen.storyboard; sourceTree = "<group>"; };
+		A96A37461D338D160094CE4C /* TeamSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSetupViewController.swift; sourceTree = "<group>"; };
+		A96A37481D338D250094CE4C /* AnsweringScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnsweringScreenViewController.swift; sourceTree = "<group>"; };
+		A96A374A1D338D310094CE4C /* AnsweringScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnsweringScreen.storyboard; sourceTree = "<group>"; };
+		A96A374C1D338D400094CE4C /* VictoryScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VictoryScreen.storyboard; sourceTree = "<group>"; };
+		A96A374E1D338D550094CE4C /* VictoryScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VictoryScreenViewController.swift; sourceTree = "<group>"; };
+		A96A37501D338D650094CE4C /* GameScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameScreen.storyboard; sourceTree = "<group>"; };
+		A96A37521D338D770094CE4C /* GameScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScreenViewController.swift; sourceTree = "<group>"; };
+		A96A37541D338D900094CE4C /* QuestionsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsCollectionViewController.swift; sourceTree = "<group>"; };
+		A96A37561D338DAD0094CE4C /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A96A37031D3365E70094CE4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96A37171D3365E80094CE4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A96A36FD1D3365E70094CE4C = {
+			isa = PBXGroup;
+			children = (
+				A96A37081D3365E70094CE4C /* Jeopardy */,
+				A96A371D1D3365E80094CE4C /* JeopardyTests */,
+				A96A37071D3365E70094CE4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A96A37071D3365E70094CE4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A96A37061D3365E70094CE4C /* Jeopardy.app */,
+				A96A371A1D3365E80094CE4C /* JeopardyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A96A37081D3365E70094CE4C /* Jeopardy */ = {
+			isa = PBXGroup;
+			children = (
+				A938CC131D47D89700B8FDEC /* QuestionData.plist */,
+				A938CC111D47D88E00B8FDEC /* gyparody.ttf */,
+				A96A37431D338CC30094CE4C /* VictoryScreen */,
+				A96A37421D338CB30094CE4C /* AnsweringScreen */,
+				A96A37411D338CA50094CE4C /* GameScreen */,
+				A96A373F1D338C8B0094CE4C /* TeamSetup */,
+				A96A37341D336A4E0094CE4C /* GameManager */,
+				A96A37291D33660A0094CE4C /* Models */,
+				A96A37091D3365E70094CE4C /* AppDelegate.swift */,
+				A96A370B1D3365E70094CE4C /* ViewController.swift */,
+				A96A370D1D3365E70094CE4C /* Main.storyboard */,
+				A96A37101D3365E70094CE4C /* Assets.xcassets */,
+				A96A37121D3365E70094CE4C /* LaunchScreen.storyboard */,
+				A96A37151D3365E70094CE4C /* Info.plist */,
+			);
+			path = Jeopardy;
+			sourceTree = "<group>";
+		};
+		A96A371D1D3365E80094CE4C /* JeopardyTests */ = {
+			isa = PBXGroup;
+			children = (
+				A96A37201D3365E80094CE4C /* Info.plist */,
+				A96A37301D3367040094CE4C /* JeopardyManagerTests.swift */,
+				A96A37321D3367F70094CE4C /* GameStateTests.swift */,
+				A96A37381D336C200094CE4C /* TestQuestionData.plist */,
+				A96A373A1D336D230094CE4C /* QuestionRetrieverTests.swift */,
+			);
+			path = JeopardyTests;
+			sourceTree = "<group>";
+		};
+		A96A37291D33660A0094CE4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A96A372A1D3366190094CE4C /* Team.swift */,
+				A96A372C1D33662B0094CE4C /* Question.swift */,
+				A96A372E1D3366420094CE4C /* GameState.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A96A37341D336A4E0094CE4C /* GameManager */ = {
+			isa = PBXGroup;
+			children = (
+				A96A37351D336A6A0094CE4C /* QuestionRetriever.swift */,
+				A96A373C1D3373AA0094CE4C /* JeopardyManager.swift */,
+			);
+			name = GameManager;
+			sourceTree = "<group>";
+		};
+		A96A373F1D338C8B0094CE4C /* TeamSetup */ = {
+			isa = PBXGroup;
+			children = (
+				A96A37441D338CF10094CE4C /* TeamSetupScreen.storyboard */,
+				A96A37461D338D160094CE4C /* TeamSetupViewController.swift */,
+			);
+			name = TeamSetup;
+			sourceTree = "<group>";
+		};
+		A96A37411D338CA50094CE4C /* GameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A96A37501D338D650094CE4C /* GameScreen.storyboard */,
+				A96A37521D338D770094CE4C /* GameScreenViewController.swift */,
+				A96A37541D338D900094CE4C /* QuestionsCollectionViewController.swift */,
+				A96A37561D338DAD0094CE4C /* QuestionCollectionViewCell.swift */,
+			);
+			name = GameScreen;
+			sourceTree = "<group>";
+		};
+		A96A37421D338CB30094CE4C /* AnsweringScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A96A37481D338D250094CE4C /* AnsweringScreenViewController.swift */,
+				A96A374A1D338D310094CE4C /* AnsweringScreen.storyboard */,
+			);
+			name = AnsweringScreen;
+			sourceTree = "<group>";
+		};
+		A96A37431D338CC30094CE4C /* VictoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A96A374C1D338D400094CE4C /* VictoryScreen.storyboard */,
+				A96A374E1D338D550094CE4C /* VictoryScreenViewController.swift */,
+			);
+			name = VictoryScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A96A37051D3365E70094CE4C /* Jeopardy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A96A37231D3365E80094CE4C /* Build configuration list for PBXNativeTarget "Jeopardy" */;
+			buildPhases = (
+				A96A37021D3365E70094CE4C /* Sources */,
+				A96A37031D3365E70094CE4C /* Frameworks */,
+				A96A37041D3365E70094CE4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jeopardy;
+			productName = Jeopardy;
+			productReference = A96A37061D3365E70094CE4C /* Jeopardy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A96A37191D3365E80094CE4C /* JeopardyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A96A37261D3365E80094CE4C /* Build configuration list for PBXNativeTarget "JeopardyTests" */;
+			buildPhases = (
+				A96A37161D3365E80094CE4C /* Sources */,
+				A96A37171D3365E80094CE4C /* Frameworks */,
+				A96A37181D3365E80094CE4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A96A371C1D3365E80094CE4C /* PBXTargetDependency */,
+			);
+			name = JeopardyTests;
+			productName = JeopardyTests;
+			productReference = A96A371A1D3365E80094CE4C /* JeopardyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A96A36FE1D3365E70094CE4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Microsoft;
+				TargetAttributes = {
+					A96A37051D3365E70094CE4C = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
+					};
+					A96A37191D3365E80094CE4C = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
+						TestTargetID = A96A37051D3365E70094CE4C;
+					};
+				};
+			};
+			buildConfigurationList = A96A37011D3365E70094CE4C /* Build configuration list for PBXProject "Jeopardy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A96A36FD1D3365E70094CE4C;
+			productRefGroup = A96A37071D3365E70094CE4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A96A37051D3365E70094CE4C /* Jeopardy */,
+				A96A37191D3365E80094CE4C /* JeopardyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A96A37041D3365E70094CE4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96A37141D3365E70094CE4C /* LaunchScreen.storyboard in Resources */,
+				A96A374B1D338D310094CE4C /* AnsweringScreen.storyboard in Resources */,
+				A938CC141D47D89700B8FDEC /* QuestionData.plist in Resources */,
+				A96A37451D338CF10094CE4C /* TeamSetupScreen.storyboard in Resources */,
+				A96A37511D338D650094CE4C /* GameScreen.storyboard in Resources */,
+				A96A374D1D338D400094CE4C /* VictoryScreen.storyboard in Resources */,
+				A96A37111D3365E70094CE4C /* Assets.xcassets in Resources */,
+				A96A370F1D3365E70094CE4C /* Main.storyboard in Resources */,
+				A938CC121D47D88E00B8FDEC /* gyparody.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96A37181D3365E80094CE4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96A37391D336C200094CE4C /* TestQuestionData.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A96A37021D3365E70094CE4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96A37361D336A6A0094CE4C /* QuestionRetriever.swift in Sources */,
+				A96A372B1D3366190094CE4C /* Team.swift in Sources */,
+				A96A372D1D33662B0094CE4C /* Question.swift in Sources */,
+				A96A372F1D3366420094CE4C /* GameState.swift in Sources */,
+				A96A37571D338DAD0094CE4C /* QuestionCollectionViewCell.swift in Sources */,
+				A96A373D1D3373AA0094CE4C /* JeopardyManager.swift in Sources */,
+				A96A370C1D3365E70094CE4C /* ViewController.swift in Sources */,
+				A96A370A1D3365E70094CE4C /* AppDelegate.swift in Sources */,
+				A96A37491D338D250094CE4C /* AnsweringScreenViewController.swift in Sources */,
+				A96A37551D338D900094CE4C /* QuestionsCollectionViewController.swift in Sources */,
+				A96A37471D338D160094CE4C /* TeamSetupViewController.swift in Sources */,
+				A96A37531D338D770094CE4C /* GameScreenViewController.swift in Sources */,
+				A96A374F1D338D550094CE4C /* VictoryScreenViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96A37161D3365E80094CE4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A96A37331D3367F70094CE4C /* GameStateTests.swift in Sources */,
+				A96A373B1D336D230094CE4C /* QuestionRetrieverTests.swift in Sources */,
+				A96A37311D3367040094CE4C /* JeopardyManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A96A371C1D3365E80094CE4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A96A37051D3365E70094CE4C /* Jeopardy */;
+			targetProxy = A96A371B1D3365E80094CE4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A96A370D1D3365E70094CE4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A96A370E1D3365E70094CE4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A96A37121D3365E70094CE4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A96A37131D3365E70094CE4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A96A37211D3365E80094CE4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A96A37221D3365E80094CE4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A96A37241D3365E80094CE4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jeopardy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.Jeopardy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A96A37251D3365E80094CE4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jeopardy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.Jeopardy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A96A37271D3365E80094CE4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JeopardyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.JeopardyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jeopardy.app/Jeopardy";
+			};
+			name = Debug;
+		};
+		A96A37281D3365E80094CE4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JeopardyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microsoft.JeopardyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jeopardy.app/Jeopardy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A96A37011D3365E70094CE4C /* Build configuration list for PBXProject "Jeopardy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96A37211D3365E80094CE4C /* Debug */,
+				A96A37221D3365E80094CE4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A96A37231D3365E80094CE4C /* Build configuration list for PBXNativeTarget "Jeopardy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96A37241D3365E80094CE4C /* Debug */,
+				A96A37251D3365E80094CE4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A96A37261D3365E80094CE4C /* Build configuration list for PBXNativeTarget "JeopardyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A96A37271D3365E80094CE4C /* Debug */,
+				A96A37281D3365E80094CE4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A96A36FE1D3365E70094CE4C /* Project object */;
+}
