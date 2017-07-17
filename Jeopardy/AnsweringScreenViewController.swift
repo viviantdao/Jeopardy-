@@ -10,6 +10,26 @@ import UIKit
 
 class AnsweringScreenViewController: UIViewController {
 
+    @IBOutlet weak var TimeRemaining: UILabel!
+    
+    @IBOutlet weak var correctButton: UIButton!
+    
+    @IBOutlet weak var incorrectButton: UIButton!
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBOutlet weak var team2Label: UILabel!
+    
+    @IBOutlet weak var team1Label: UILabel!
+    
+    @IBOutlet weak var team3Label: UILabel!
+    
+    @IBOutlet weak var team4Label: UILabel!
+    
+    var fullTime: Int = 60
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
