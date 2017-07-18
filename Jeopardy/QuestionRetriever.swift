@@ -8,12 +8,37 @@
 
 import Foundation
 
-class QuestionRetriever {
-    fileprivate(set) var countOfQuestions: Int = 0
-    fileprivate(set) var categories: [String] = []
+class QuestionRetriever: IRetrieveQuestions {
+    
+    private var questions: [Question] = []
     
     init(path: String) {
+        
+        let questionDict = NSArray(contentsOfFile: path)
+        
+        for questionArray in questionDict!{
+            self.questions += questionArray as! [Question]
+        }
+        
     }
+    
+    var countOfQuestions: Int {
+        
+        get { return self.questions.count }
+        
+    }
+    
+    var categories: [String] {
+        
+        get{
+            
+            return self.questions.reduce([String](), { (array, question) -> [String] in
+                array + [question.category]
+            })
+        }
+        
+    }
+    
     
     func questionForCategory(_ category:String, index:Int, markAsAsked:Bool = false) -> Question {
         return Question(text: "question", time: 0, pointValue: 0, category: "category")

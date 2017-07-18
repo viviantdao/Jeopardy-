@@ -9,6 +9,7 @@
 import Foundation
 
 public struct GameState {
+    
     public fileprivate(set) var teams:[Team] = []
     public fileprivate(set) var currentQuestion:Question? = nil
     public fileprivate(set) var gameOver:Bool = false
@@ -19,5 +20,23 @@ public struct GameState {
         self.currentQuestion = currentQuestion
         self.gameOver = gameOver
         self.pickNewQuestion = pickNewQuestion
+    }
+    
+    init(currentQuestion:Question?, gameOver:Bool = false, pickNewQuestion:Bool = false){
+        self.currentQuestion = currentQuestion
+        self.gameOver = gameOver
+        self.pickNewQuestion = pickNewQuestion
+    }
+    
+    func StartNewGame(teams: [Team]?)->GameState{
+        
+        return GameState(teams: teams ?? self.teams,
+                         currentQuestion: nil,
+                         gameOver: false,
+                         pickNewQuestion: false)
+    }
+    
+    mutating func AddTeam(team: Team)->Void{
+        self.teams.append(team)
     }
 }
