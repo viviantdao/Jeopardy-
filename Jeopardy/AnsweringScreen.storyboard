@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bYs-Yp-vbK">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,20 +23,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 seconds remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRH-bO-m45">
-                                <rect key="frame" x="598" y="20" width="170" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="511" y="20" width="344" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-RN-cxh">
-                                <rect key="frame" x="20" y="20" width="62" height="30"/>
-                                <state key="normal" title="Incorrect">
-                                    <color key="titleColor" red="0.96470588239999999" green="0.32549019610000002" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-eF-m0A">
-                                <rect key="frame" x="1294" y="20" width="52" height="30"/>
-                                <state key="normal" title="Correct">
+                                <rect key="frame" x="1248" y="20" width="98" height="128"/>
+                                <state key="normal" backgroundImage="if_Tick_Mark_Dark_1398912">
                                     <color key="titleColor" red="0.0" green="0.66729910709999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -71,6 +65,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-RN-cxh">
+                                <rect key="frame" x="20" y="20" width="98" height="128"/>
+                                <state key="normal" backgroundImage="if_Close_Icon_Dark_1398917">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.32549019610000002" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -91,7 +91,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TimeRemaining" destination="fRH-bO-m45" id="vAJ-ra-3Uq"/>
+                        <outlet property="TimeRemainingLabel" destination="fRH-bO-m45" id="SY4-RZ-oft"/>
                         <outlet property="correctButton" destination="1yP-eF-m0A" id="kfi-ht-96u"/>
                         <outlet property="incorrectButton" destination="FLb-RN-cxh" id="iQb-Iw-xRd"/>
                         <outlet property="questionLabel" destination="L69-8U-0YF" id="WPt-t5-niu"/>
@@ -106,4 +106,8 @@
             <point key="canvasLocation" x="57.979502196193259" y="28.710937499999996"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="if_Close_Icon_Dark_1398917" width="98" height="128"/>
+        <image name="if_Tick_Mark_Dark_1398912" width="98" height="128"/>
+    </resources>
 </document>
