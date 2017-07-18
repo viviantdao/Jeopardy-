@@ -8,9 +8,10 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "cell"
+private var count: Int = 0
 
-class QuestionsCollectionViewController: UICollectionViewController {
+class QuestionsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,6 @@ class QuestionsCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -43,23 +43,49 @@ class QuestionsCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 5
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 6
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        
+//        //size of the collection view
+//        let frameWidth: CGFloat = self.view.frame.size.width
+//        let frameHeight: CGFloat = self.view.frame.size.height
+//        
+//        return CGSize(frameWidth<>, frameHeight<>)
+//        
+//    }
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//       //
+//    }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as UICollectionViewCell
     
+        count += 1
+        
         // Configure the cell
+        let label: UILabel = cell.viewWithTag(1) as! UILabel
+        label.text = String(100*count)
     
         return cell
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*
