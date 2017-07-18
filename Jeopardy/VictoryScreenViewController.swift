@@ -10,6 +10,16 @@ import UIKit
 
 class VictoryScreenViewController: UIViewController {
 
+    @IBOutlet weak var winnerAnnounced: UILabel!
+    
+    @IBOutlet weak var winnerScore: UILabel!
+    
+    @IBOutlet weak var secondPlace: UILabel!
+    
+    @IBOutlet weak var thirdPlace: UILabel!
+    
+    @IBOutlet weak var fourthPlace: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +31,17 @@ class VictoryScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func highScore(){
+        
+//  take into account all scores, order highest to low in array
+//        array in order of highest to lowest
+//         var winningTeam = array[0]
+//         winnerAnnounced.text =   "You Rock,: \((winningTeam))"
+        
+//    winnerScore.text = "You scored
+    }
+
+//    switch case?
 
     /*
     // MARK: - Navigation
