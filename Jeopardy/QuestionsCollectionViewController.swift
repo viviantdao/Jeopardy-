@@ -10,6 +10,12 @@ import UIKit
 
 private let reuseIdentifier = "cell"
 private var count: Int = 0
+private var questions: Int = 5
+private var categories: Int = 5
+
+private var screenX :Int = 950
+private var screenY :Int = 580
+private var insetRatio: Double = 0.012
 
 class QuestionsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -43,28 +49,23 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return categories
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 6
+        return questions
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        
-//        //size of the collection view
-//        let frameWidth: CGFloat = self.view.frame.size.width
-//        let frameHeight: CGFloat = self.view.frame.size.height
-//        
-//        return CGSize(frameWidth<>, frameHeight<>)
-//        
-//    }
+    //SET SIZES FOR CELLS based on category & question numbers
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: (screenX/categories) - Int(Double(screenX)*insetRatio), height: ((screenY-(questions))/questions) - 15)
+        
+    }
 
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//       //
-//    }
+    
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as UICollectionViewCell
