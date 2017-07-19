@@ -6,6 +6,136 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="gyparody.ttf">
+            <string>Gyparody</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Team Setup View Controller-->
+        <scene sceneID="elh-Dn-FcG">
+            <objects>
+                <viewController id="oZV-Kt-2CO" customClass="TeamSetupViewController" customModule="Jeopardy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dv8-xY-0mR"/>
+                        <viewControllerLayoutGuide type="bottom" id="wYO-Yi-SMD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DKH-3E-yiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift Jeopardy " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKC-f9-bEe" customClass="TeamSetupViewConreoller">
+                                <rect key="frame" x="100" y="-41" width="1167" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1167" id="8i7-oc-yrM"/>
+                                    <constraint firstAttribute="height" constant="197" id="Tm2-87-qS6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="95"/>
+                                <color key="textColor" red="0.22866562008857727" green="0.043127119541168213" blue="0.52305090427398682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter team name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-qd-L25">
+                                <rect key="frame" x="406" y="281.5" width="496" height="55"/>
+                                <color key="textColor" red="1" green="0.72941176470000002" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the names of 4 teams to begin your game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
+                                <rect key="frame" x="100" y="201" width="1167" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="32"/>
+                                <color key="textColor" red="0.26050364971160889" green="0.083687253296375275" blue="0.54292809963226318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-9W-o3K">
+                                <rect key="frame" x="566" y="438" width="177" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="52k-rY-reL"/>
+                                    <constraint firstAttribute="height" constant="379" id="HBy-cz-tmW"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamNameCell" rowHeight="91" id="uay-9m-m7G" customClass="TeamCell" customModule="Jeopardy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="177" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uay-9m-m7G" id="6ej-1u-Rl5">
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="90.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-7a-MxL">
+                                                    <rect key="frame" x="59" y="0.0" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="top" secondItem="6ej-1u-Rl5" secondAttribute="top" id="FmT-3J-xER"/>
+                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="leading" secondItem="6ej-1u-Rl5" secondAttribute="leadingMargin" constant="51" id="lTe-tX-X8S"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oZV-Kt-2CO" id="7WF-Ig-hg1"/>
+                                    <outlet property="delegate" destination="oZV-Kt-2CO" id="EfU-9n-Xvi"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LA-3U-AfU">
+                                <rect key="frame" x="628" y="890" width="52" height="35"/>
+                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="23"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="oZV-Kt-2CO" eventType="touchUpInside" id="Pi9-Zp-N0D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-Gj-sfA">
+                                <rect key="frame" x="910" y="281.5" width="49" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="fdO-zL-q2U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTeamName:" destination="oZV-Kt-2CO" eventType="touchUpInside" id="hd8-Xm-I37"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31709900498390198" green="0.43500179052352905" blue="0.81781226396560669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="centerY" secondItem="Bz6-qd-L25" secondAttribute="centerY" id="3ie-0H-zJ9"/>
+                            <constraint firstItem="wYO-Yi-SMD" firstAttribute="top" secondItem="tGp-9W-o3K" secondAttribute="bottom" constant="207" id="6a7-0e-2fg"/>
+                            <constraint firstItem="6LA-3U-AfU" firstAttribute="top" secondItem="tGp-9W-o3K" secondAttribute="bottom" constant="73" id="7pN-Ub-fHv"/>
+                            <constraint firstItem="KKC-f9-bEe" firstAttribute="centerX" secondItem="DKH-3E-yiQ" secondAttribute="centerX" id="GrG-1Z-Vz3"/>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="top" secondItem="3Of-bF-POe" secondAttribute="bottom" constant="49" id="JqV-lN-z6I"/>
+                            <constraint firstItem="tGp-9W-o3K" firstAttribute="centerX" secondItem="Bz6-qd-L25" secondAttribute="centerX" id="K0k-1x-m0H"/>
+                            <constraint firstItem="Bz6-qd-L25" firstAttribute="leading" secondItem="DKH-3E-yiQ" secondAttribute="leadingMargin" constant="386" id="Kng-hX-umQ"/>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="leading" secondItem="Bz6-qd-L25" secondAttribute="trailing" constant="8" symbolic="YES" id="SJ4-nG-VJF"/>
+                            <constraint firstItem="3Of-bF-POe" firstAttribute="top" secondItem="KKC-f9-bEe" secondAttribute="bottom" constant="45" id="d4B-fi-VS9"/>
+                            <constraint firstItem="KKC-f9-bEe" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="topMargin" constant="-41" id="hv9-fK-8Uz"/>
+                            <constraint firstItem="6LA-3U-AfU" firstAttribute="centerX" secondItem="tGp-9W-o3K" secondAttribute="centerX" id="kc1-9E-ane"/>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="bottom" secondItem="Bz6-qd-L25" secondAttribute="bottom" id="ljX-sb-eCW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bz6-qd-L25" secondAttribute="trailing" constant="444" id="pHN-vL-g4R"/>
+                            <constraint firstItem="KKC-f9-bEe" firstAttribute="centerX" secondItem="3Of-bF-POe" secondAttribute="centerX" id="w97-om-1Yj"/>
+                            <constraint firstItem="3Of-bF-POe" firstAttribute="width" secondItem="KKC-f9-bEe" secondAttribute="width" id="zbK-u3-oci"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addTeamName" destination="Xca-Gj-sfA" id="zbq-jC-6cq"/>
+                        <outlet property="enterTeamName" destination="Bz6-qd-L25" id="1sA-Tb-5AC"/>
+                        <outlet property="startGame" destination="6LA-3U-AfU" id="QXr-Mg-ILD"/>
+                        <outlet property="teamTable" destination="tGp-9W-o3K" id="HP3-1a-8ai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QL-LZ-s2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16.251830161054173" y="40.4296875"/>
+        </scene>
+    </scenes>
 </document>

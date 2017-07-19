@@ -11,6 +11,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    static let Manager: JeopardyManager =
+        JeopardyGameBuilder { builder in
+            builder.setPathDelegate({() in
+                return Bundle.main.path(forResource: "QuestionData", ofType: "plist")!
+            })
+        }.build()
+    
     var window: UIWindow?
 
 
