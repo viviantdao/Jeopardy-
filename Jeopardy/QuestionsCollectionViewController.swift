@@ -17,13 +17,15 @@ private var screenX :Int = 950
 private var screenY :Int = 580
 private var insetRatio: Double = 0.012
 
+
+
 class QuestionsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
 
@@ -68,6 +70,7 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
     
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as UICollectionViewCell
     
         count += 1
@@ -75,7 +78,7 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         // Configure the cell
         let label: UILabel = cell.viewWithTag(1) as! UILabel
         label.text = String(100*count)
-    
+        
         return cell
     }
 
@@ -89,22 +92,44 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
     
     // MARK: UICollectionViewDelegate
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
+    //Highlighted During tracking:
+//    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        return true
+//    }
+//    
+//
+//    
+//    // Uncomment this method to specify if the specified item should be selected
+//    //Selected:
+//    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        return true
+//    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+        let y = indexPath.row
+        let x = indexPath.section
+        print("section \(x)")
+        print("row \(y)")
+        
+        
+        
+        
     }
-    */
 
-    /*
+    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if (indexPath.row == 1) {
+            return false
+        } else {
+            return true
+        }
+    }
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+    
+    /*
+    
     override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
         return false
     }
@@ -119,3 +144,11 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
     */
 
 }
+
+
+
+
+
+
+
+

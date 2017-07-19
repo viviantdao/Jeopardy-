@@ -82,7 +82,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-ws-xXo">
                                             <rect key="frame" x="0.0" y="0.0" width="178" height="89"/>
-                                            <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="51"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
