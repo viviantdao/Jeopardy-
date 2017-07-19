@@ -15,14 +15,12 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     var jeopardy = AppDelegate.Manager
     
     @IBOutlet weak var enterTeamName: UITextField!
-    @IBOutlet weak var jeopardyTable: UITableViewCell!
-    @IBOutlet weak var teamNames: UILabel!
     @IBOutlet weak var teamTable: UITableView!
     @IBOutlet weak var startGame: UIButton!
     
     @IBAction func addTeamName(_ sender: Any) {
-        Manager.AddNewTeam(enterTeamName?.text)
-            }
+        jeopardy.AddNewTeam(name: (enterTeamName?.text)!)
+    }
     
    
     
@@ -40,22 +38,22 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableViewL: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = self.teamTable.dequeueReusableCell(withIdentifier:"teamNameCell", for: indexPath)
-    
-   return cell
+        let cell: TeamCell = self.teamTable.dequeueReusableCell(withIdentifier:"teamNameCell", for: indexPath) as! TeamCell
+        cell.teamName.text = self.names[indexPath.row]
+        return cell
     
     }
  
     
     override func viewWillAppear(_ animated: Bool) {
-        Manager.RegisterNewTeamAddedHandler( {teams in
+        jeopardy.RegisterNewTeamAddedHandler( callback: {teams in
             self.names = teams
             self.teamTable.reloadData()
             if self.names.count >= 4 {
-                startGame.isEnabled = true
+                self.startGame.isEnabled = true
             }
             else {
-                startGame.isEnabled = false
+                self.startGame.isEnabled = false
             }
             
 

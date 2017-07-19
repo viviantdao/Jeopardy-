@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="height" constant="379" id="HBy-cz-tmW"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamNameCell" rowHeight="91" id="uay-9m-m7G">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamNameCell" rowHeight="91" id="uay-9m-m7G" customClass="TeamCell" customModule="Jeopardy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="177" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uay-9m-m7G" id="6ej-1u-Rl5">
@@ -90,7 +90,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startButtonPressed:" destination="oZV-Kt-2CO" eventType="touchUpInside" id="WVd-3m-DL4"/>
+                                    <action selector="startButtonPressed:" destination="oZV-Kt-2CO" eventType="touchUpInside" id="Pi9-Zp-N0D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-Gj-sfA">
@@ -103,7 +103,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addButton:" destination="oZV-Kt-2CO" eventType="touchUpInside" id="ima-hW-hna"/>
                                     <action selector="addTeamName:" destination="oZV-Kt-2CO" eventType="touchUpInside" id="hd8-Xm-I37"/>
                                 </connections>
                             </button>
@@ -128,15 +127,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="TeamNames" destination="Bz6-qd-L25" id="0Cs-UD-eKC"/>
-                        <outlet property="TeamOne" destination="wuT-7a-MxL" id="ruZ-rV-dIp"/>
                         <outlet property="addTeamName" destination="Xca-Gj-sfA" id="zbq-jC-6cq"/>
                         <outlet property="enterTeamName" destination="Bz6-qd-L25" id="1sA-Tb-5AC"/>
-                        <outlet property="jeopardyTable" destination="uay-9m-m7G" id="1ap-vy-9m4"/>
-                        <outlet property="startButtonPressed" destination="6LA-3U-AfU" id="9U1-Ul-Ebs"/>
                         <outlet property="startGame" destination="6LA-3U-AfU" id="QXr-Mg-ILD"/>
-                        <outlet property="startGameButton" destination="6LA-3U-AfU" id="nsV-V3-jrW"/>
-                        <outlet property="teamNames" destination="wuT-7a-MxL" id="iEp-MD-kxy"/>
                         <outlet property="teamTable" destination="tGp-9W-o3K" id="HP3-1a-8ai"/>
                     </connections>
                 </viewController>
