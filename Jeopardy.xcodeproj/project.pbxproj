@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F1EAB8A1F1FC9BD0072EDD7 /* JeopardyBuilderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1EAB891F1FC9BD0072EDD7 /* JeopardyBuilderError.swift */; };
 		5F2BD41F1F1D3FEB00924750 /* IRetrieveQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2BD41E1F1D3FEB00924750 /* IRetrieveQuestions.swift */; };
 		A938CC121D47D88E00B8FDEC /* gyparody.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A938CC111D47D88E00B8FDEC /* gyparody.ttf */; };
 		A938CC141D47D89700B8FDEC /* QuestionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A938CC131D47D89700B8FDEC /* QuestionData.plist */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F1EAB891F1FC9BD0072EDD7 /* JeopardyBuilderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeopardyBuilderError.swift; sourceTree = "<group>"; };
 		5F2BD41E1F1D3FEB00924750 /* IRetrieveQuestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRetrieveQuestions.swift; sourceTree = "<group>"; };
 		A938CC111D47D88E00B8FDEC /* gyparody.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gyparody.ttf; sourceTree = "<group>"; };
 		A938CC131D47D89700B8FDEC /* QuestionData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionData.plist; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A96A37351D336A6A0094CE4C /* QuestionRetriever.swift */,
 				A96A373C1D3373AA0094CE4C /* JeopardyManager.swift */,
 				5F2BD41E1F1D3FEB00924750 /* IRetrieveQuestions.swift */,
+				5F1EAB891F1FC9BD0072EDD7 /* JeopardyBuilderError.swift */,
 			);
 			name = GameManager;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				A96A37361D336A6A0094CE4C /* QuestionRetriever.swift in Sources */,
 				A96A372B1D3366190094CE4C /* Team.swift in Sources */,
 				A96A372D1D33662B0094CE4C /* Question.swift in Sources */,
+				5F1EAB8A1F1FC9BD0072EDD7 /* JeopardyBuilderError.swift in Sources */,
 				A96A372F1D3366420094CE4C /* GameState.swift in Sources */,
 				A96A37571D338DAD0094CE4C /* QuestionCollectionViewCell.swift in Sources */,
 				5F2BD41F1F1D3FEB00924750 /* IRetrieveQuestions.swift in Sources */,
