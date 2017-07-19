@@ -10,8 +10,13 @@ import UIKit
 
 class GameScreenViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
