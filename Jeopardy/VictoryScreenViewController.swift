@@ -68,7 +68,7 @@ class VictoryScreenViewController: UIViewController {
         
         sortedTeams = teamInfo.sorted(by: { $0.score > $1.score })
         winnerAnnounced.text =   "You Rock \((sortedTeams[0].name))!"
-
+        winnerScore.text = "You Scored \((sortedTeams[0].score))"
     }
     
     func otherPlaces(){
