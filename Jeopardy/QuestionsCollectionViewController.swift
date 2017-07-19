@@ -19,10 +19,15 @@ private var insetRatio: Double = 0.012
 
 
 
+
 class QuestionsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    var pressed: [[Bool]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pressed = [[false,false,false,false,false],[false,false,false,false,false],[false,false,false,false,false],[false,false,false,false,false],
+                        [false,false,false,false,false]]
 
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
@@ -77,9 +82,21 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         
         // Configure the cell
         let label: UILabel = cell.viewWithTag(1) as! UILabel
-        label.text = String(100*count)
+        
+        
+        if(pressed[indexPath.section][indexPath.row]){
+            label.text = ""
+            
+            UIView.animate(withDuration: 2, animations: { () -> Void in
+                label.backgroundColor = .red })
+        }else{
+            label.text = String(100*(1+indexPath.row))
+            
+        }
+        
         
         return cell
+        
     }
 
     
@@ -111,16 +128,20 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
 
         let y = indexPath.row
         let x = indexPath.section
-        print("section \(x)")
-        print("row \(y)")
+        
+        print("[\(x), \(y)]")
+        print(pressed[x][y])
+        
+        pressed[x][y] = true
         
         
+        collectionView.reloadItems(at: [indexPath])
         
         
     }
 
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        if (indexPath.row == 1) {
+        if (pressed[indexPath.section][indexPath.row]) {
             return false
         } else {
             return true
