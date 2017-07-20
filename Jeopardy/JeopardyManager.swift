@@ -25,9 +25,16 @@ class JeopardyManager {
         self.gameState = self.gameState.StartNewGame()
         
     }
+    
     func getCategories()->[String] {
         
         return self.questionRetriever.categories
+        
+    }
+    
+    func getQuestionPerCategoryCount()->Int{
+        
+        return self.questionRetriever.countOfQuestionsPerCategory
         
     }
     
