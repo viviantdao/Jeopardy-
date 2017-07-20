@@ -75,6 +75,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWM-8g-cmE">
+                                <rect key="frame" x="20" y="320" width="726" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.58558213710784912" blue="0.69987893104553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -86,9 +92,12 @@
                             <constraint firstAttribute="leadingMargin" secondItem="g7m-fA-lWE" secondAttribute="leading" id="Sdm-fq-QxY"/>
                             <constraint firstItem="x4Q-bM-RgO" firstAttribute="leading" secondItem="w9k-SS-XoP" secondAttribute="leadingMargin" constant="345" id="Uh2-Jk-3gX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1yP-eF-m0A" secondAttribute="trailing" id="Uu1-x9-5nv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uWM-8g-cmE" secondAttribute="trailing" constant="600" id="WFP-xR-lGh"/>
                             <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="1AA-Fd-gmA" secondAttribute="bottom" constant="21" id="YbB-Dc-bFb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="uWM-8g-cmE" secondAttribute="leading" id="ZPf-qb-TYd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ANQ-Ri-EI1" secondAttribute="trailing" id="Zbg-9j-zhu"/>
                             <constraint firstItem="fRH-bO-m45" firstAttribute="centerX" secondItem="w9k-SS-XoP" secondAttribute="centerX" id="b9f-1m-1Nm"/>
+                            <constraint firstItem="uWM-8g-cmE" firstAttribute="top" secondItem="Zju-7m-cZK" secondAttribute="bottom" constant="300" id="cm2-Zk-JY0"/>
                             <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="P3r-NX-ysq" secondAttribute="bottom" constant="20" id="hsI-l9-HYG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="P3r-NX-ysq" secondAttribute="leading" id="jik-B6-AcU"/>
                             <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="x4Q-bM-RgO" secondAttribute="bottom" constant="20" id="vKy-Bf-lbe"/>
@@ -102,6 +111,7 @@
                         <outlet property="correctButton" destination="1yP-eF-m0A" id="kfi-ht-96u"/>
                         <outlet property="incorrectButton" destination="g7m-fA-lWE" id="l84-0k-0Im"/>
                         <outlet property="popUpLabel" destination="Zhv-Hy-dPu" id="kHi-tk-0Wo"/>
+                        <outlet property="questionLabel" destination="uWM-8g-cmE" id="EJu-6w-6RK"/>
                         <outlet property="team1Label" destination="P3r-NX-ysq" id="NMv-FS-D2k"/>
                         <outlet property="team2Label" destination="x4Q-bM-RgO" id="FmP-Q5-iPL"/>
                         <outlet property="team3Label" destination="1AA-Fd-gmA" id="ePN-ln-wnW"/>
