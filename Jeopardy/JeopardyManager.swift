@@ -59,6 +59,19 @@ class JeopardyManager {
         self.newTeamAddedHandler = callback
         
     }
+    
+    func GetTeamNames()->[String]{
+        
+        return self.gameState.teams.reduce([String](), { (names, team) -> [String] in
+            names + [team.name]})
+        
+    }
+    
+    func GetTeamResults()->[Team]{
+        
+        return self.gameState.teams
+        
+    }
 }
 
 class JeopardyGameBuilder{
