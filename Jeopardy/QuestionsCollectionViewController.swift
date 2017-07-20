@@ -10,24 +10,51 @@ import UIKit
 
 private let reuseIdentifier = "cell"
 private var count: Int = 0
-private var questions: Int = 5
-private var categories: Int = 5
 
-private var screenX :Int = 950
+
+private var screenX :Int = 740
 private var screenY :Int = 580
-private var insetRatio: Double = 0.012
+
+
+//private var screenX2 : Int
+
+
+private var insetRatio: Double = 0.02
 
 
 
 
 class QuestionsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    var numberOfCategories = AppDelegate.Manager.getCategories().count
+    
+    var categories: [String] = AppDelegate.Manager.getCategories()
+    
+    var teams:[String] = [] //GET TEAM LIST
+    
+    var screenWidth = 0
 
     var pressed: [[Bool]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pressed = [[false,false,false,false,false],[false,false,false,false,false],[false,false,false,false,false],[false,false,false,false,false],
-                        [false,false,false,false,false]]
+        
+        
+        
+                    //when someone accuses you of something...
+        self.pressed = [[false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],]
+        
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
@@ -37,6 +64,11 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.screenWidth = Int(self.collectionView!.frame.width)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,21 +86,24 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
 
     // MARK: UICollectionViewDataSource
 
+    
+    ////CATEGORIES
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return categories
+        return numberOfCategories
     }
 
-
+    /////QUESTIONS
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return questions
+        return numberOfCategories
     }
     
     //SET SIZES FOR CELLS based on category & question numbers
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (screenX/categories) - Int(Double(screenX)*insetRatio), height: ((screenY-(questions))/questions) - 15)
+        return CGSize(width: (screenWidth/(numberOfCategories)) - Int(Double(screenWidth)*insetRatio) , height: ((screenY-(numberOfCategories))/numberOfCategories) )
+        //(width: (screenX/categories) - Int(Double(screenX)*insetRatio), height: ((screenY-(questions))/questions) - 15)
         
     }
 
@@ -88,7 +123,8 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
             label.text = ""
             
             UIView.animate(withDuration: 2, animations: { () -> Void in
-                label.backgroundColor = .red })
+                label.backgroundColor = .white })
+            
         }else{
             label.text = String(100*(1+indexPath.row))
             

@@ -11,6 +11,8 @@ import Foundation
 final class QuestionRetriever: IRetrieveQuestions {
     
     private var questions: [Question] = []
+    private var _categories: [String] = []
+    private var numberOfQuestionsPerCategory:Int = 0
     
     init(path: String) {
         
@@ -23,6 +25,9 @@ final class QuestionRetriever: IRetrieveQuestions {
                                           time: question["time"] as! Int,
                                           pointValue: question["pointValue"] as! Int,
                                           category: question["category"] as! String))
+                if !self._categories.contains(question["category"] as! String){
+                    self._categories.append(question["category"] as! String)
+                }
             }
         }
     }
@@ -31,6 +36,25 @@ final class QuestionRetriever: IRetrieveQuestions {
         
         get { return self.questions.count }
         
+    }
+    
+    var countOfQuestionsPerCategory:Int {
+        
+        get {
+            
+            if self.numberOfQuestionsPerCategory != 0{
+                return self.numberOfQuestionsPerCategory
+            }
+            
+            let category = self.categories[0]
+            
+            self.numberOfQuestionsPerCategory
+                = self.questions.filter({ (question) -> Bool in
+                    question.category == category
+                }).count
+            
+            return self.numberOfQuestionsPerCategory
+        }
     }
     
     var categories: [String] {
@@ -48,7 +72,6 @@ final class QuestionRetriever: IRetrieveQuestions {
     }
     
     
-    
     func questionForCategory(_ category:String, pointValue:Int, markAsAsked: Bool = false) -> Question {
         
         let questionResult = self.questions.filter { (question) -> Bool in
@@ -56,6 +79,16 @@ final class QuestionRetriever: IRetrieveQuestions {
         }
         var question = questionResult[0]
         question.hasBeenAsked = markAsAsked
+        return question
+    }
+    
+    func questionForCategoryBasedOnBsIndexSystemNeedlesslyCouplingImplementations(x:Int, y:Int)->Question{
+        let category = self._categories[x]
+        
+        let question = self.questions.filter { (question) -> Bool in
+            question.category == category
+        }[y]
+        
         return question
     }
 }

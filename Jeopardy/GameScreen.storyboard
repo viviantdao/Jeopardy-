@@ -27,27 +27,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQ4-ZC-8MT">
-                                <rect key="frame" x="0.0" y="80" width="1024" height="628"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="708"/>
                                 <connections>
                                     <segue destination="qiG-aB-CDO" kind="embed" id="1dA-R5-p0W"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeopardy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-Fl-2J0">
-                                <rect key="frame" x="401.5" y="9" width="221" height="63"/>
-                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ebV-Fl-2J0" firstAttribute="centerX" secondItem="xJE-ya-QYN" secondAttribute="centerX" id="7cK-bz-r4H"/>
-                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="top" secondItem="00P-Du-ZnF" secondAttribute="bottom" constant="60" id="P5V-hp-PXH"/>
+                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="top" secondItem="xJE-ya-QYN" secondAttribute="top" id="P2G-2S-Mzu"/>
                             <constraint firstItem="cUN-rx-DfY" firstAttribute="top" secondItem="BQ4-ZC-8MT" secondAttribute="bottom" constant="60" id="aRy-4v-Wha"/>
                             <constraint firstItem="BQ4-ZC-8MT" firstAttribute="leading" secondItem="xJE-ya-QYN" secondAttribute="leading" id="dHq-eb-mvs"/>
-                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="top" secondItem="ebV-Fl-2J0" secondAttribute="bottom" constant="8" id="mY5-HS-S41"/>
-                            <constraint firstItem="ebV-Fl-2J0" firstAttribute="top" secondItem="00P-Du-ZnF" secondAttribute="bottom" constant="-11" id="pzI-Lj-Ygu"/>
-                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="centerX" secondItem="ebV-Fl-2J0" secondAttribute="centerX" id="z9e-Af-oCD"/>
+                            <constraint firstAttribute="trailing" secondItem="BQ4-ZC-8MT" secondAttribute="trailing" id="nc0-oc-Thy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -63,7 +54,7 @@
             <objects>
                 <collectionViewController id="qiG-aB-CDO" customClass="QuestionsCollectionViewController" customModule="Jeopardy" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="nSQ-Xn-aIp">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="628"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="708"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AKo-Yt-dkq">
@@ -105,7 +96,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SR-Cl-X99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665.44655929721807" y="-796.875"/>
+            <point key="canvasLocation" x="1190" y="-797"/>
         </scene>
     </scenes>
 </document>

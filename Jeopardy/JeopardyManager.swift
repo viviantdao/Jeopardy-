@@ -10,7 +10,6 @@ import Foundation
 
 class JeopardyManager {
     
-    
     private(set) var questionRetriever: IRetrieveQuestions
     private(set) var gameState: GameState
     private var newTeamAddedHandler: (([String])->Void)?
@@ -25,10 +24,24 @@ class JeopardyManager {
         self.gameState = self.gameState.StartNewGame()
         
     }
+    
     func getCategories()->[String] {
         
         return self.questionRetriever.categories
         
+    }
+    
+    func getQuestionPerCategoryCount()->Int{
+        
+        return self.questionRetriever.countOfQuestionsPerCategory
+        
+    }
+    
+    func GetQuestionFromCategoryQuestionIndex(category: Int, Question:Int)->Question{
+        
+        let question = questionRetriever.questionForCategoryBasedOnBsIndexSystemNeedlesslyCouplingImplementations(x: category, y: Question)
+        self.gameState.SetCurrentQuestion(question: question)
+        return question
     }
     
     func startQuestionWithCategory(_ category:String, pointValue:Int) {
@@ -51,6 +64,25 @@ class JeopardyManager {
     func RegisterNewTeamAddedHandler(callback: @escaping ([String])->Void){
         
         self.newTeamAddedHandler = callback
+        
+    }
+    
+    func GetTeamNames()->[String]{
+        
+        return self.gameState.teams.reduce([String](), { (names, team) -> [String] in
+            names + [team.name]})
+        
+    }
+    
+    func GetTeamResults()->[Team]{
+        
+        return self.gameState.teams
+        
+    }
+    
+    func GetCurrentQuestion()->Question {
+        
+        return self.gameState.currentQuestion!
         
     }
 }

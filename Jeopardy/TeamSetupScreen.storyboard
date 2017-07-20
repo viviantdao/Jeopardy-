@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oZV-Kt-2CO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oZV-Kt-2CO">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,11 +9,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="gyparody.ttf">
-            <string>Gyparody</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Team Setup View Controller-->
         <scene sceneID="elh-Dn-FcG">
@@ -27,69 +22,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift Jeopardy " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKC-f9-bEe" customClass="TeamSetupViewController">
-                                <rect key="frame" x="100" y="-41" width="1167" height="197"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swift jeopardy " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKC-f9-bEe" customClass="TeamSetupViewController">
+                                <rect key="frame" x="100" y="28" width="1167" height="222"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1167" id="8i7-oc-yrM"/>
-                                    <constraint firstAttribute="height" constant="197" id="Tm2-87-qS6"/>
+                                    <constraint firstAttribute="height" constant="222" id="Tm2-87-qS6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="95"/>
-                                <color key="textColor" red="0.22866562008857727" green="0.043127119541168213" blue="0.52305090427398682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="97"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter team name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-qd-L25">
-                                <rect key="frame" x="406" y="282" width="496" height="55"/>
-                                <color key="textColor" red="1" green="0.72941176470000002" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="435" y="330" width="496" height="55"/>
+                                <color key="textColor" red="0.26597154140472412" green="0.56995230913162231" blue="0.89546698331832886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the names of 4 teams to begin your game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
-                                <rect key="frame" x="100" y="201" width="1167" height="32"/>
-                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="32"/>
-                                <color key="textColor" red="0.26050364971160889" green="0.083687253296375275" blue="0.54292809963226318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter the names of 4 teams " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
+                                <rect key="frame" x="100" y="258" width="1167" height="38"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-9W-o3K">
-                                <rect key="frame" x="100" y="438" width="1097" height="379"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="379" id="5Ty-YN-8ia"/>
-                                    <constraint firstAttribute="width" constant="1097" id="n7D-Rw-Uo9"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamNameCell" rowHeight="91" id="uay-9m-m7G" customClass="TeamCell" customModule="Jeopardy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1097" height="91"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uay-9m-m7G" id="6ej-1u-Rl5">
-                                            <rect key="frame" x="0.0" y="0.0" width="1097" height="90.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-7a-MxL">
-                                                    <rect key="frame" x="59" y="0.0" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="top" secondItem="6ej-1u-Rl5" secondAttribute="top" id="FmT-3J-xER"/>
-                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="leading" secondItem="6ej-1u-Rl5" secondAttribute="leadingMargin" constant="51" id="lTe-tX-X8S"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="teamName" destination="wuT-7a-MxL" id="881-T3-4DB"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="oZV-Kt-2CO" id="7WF-Ig-hg1"/>
-                                    <outlet property="delegate" destination="oZV-Kt-2CO" id="EfU-9n-Xvi"/>
-                                </connections>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LA-3U-AfU">
-                                <rect key="frame" x="657" y="890" width="52" height="35"/>
-                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="23"/>
-                                <state key="normal" title="Start">
+                                <rect key="frame" x="652.5" y="890" width="61" height="53"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="34"/>
+                                <state key="normal" title="start">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -97,7 +55,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-Gj-sfA">
-                                <rect key="frame" x="910" y="282" width="49" height="55"/>
+                                <rect key="frame" x="939" y="322" width="49" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="fdO-zL-q2U"/>
                                 </constraints>
@@ -109,22 +67,63 @@
                                     <action selector="addTeamName:" destination="oZV-Kt-2CO" eventType="touchUpInside" id="hd8-Xm-I37"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-9W-o3K">
+                                <rect key="frame" x="847" y="913" width="327" height="400"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="5Ty-YN-8ia"/>
+                                    <constraint firstAttribute="width" constant="327" id="n7D-Rw-Uo9"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.31709900498390198" green="0.43500179052352905" blue="0.81781226396560669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamNameCell" rowHeight="91" id="uay-9m-m7G" customClass="TeamCell" customModule="Jeopardy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="327" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uay-9m-m7G" id="6ej-1u-Rl5">
+                                            <rect key="frame" x="0.0" y="0.0" width="327" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-7a-MxL">
+                                                    <rect key="frame" x="8" y="8" width="470" height="91"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
+                                                    <color key="textColor" red="0.26597154140472412" green="0.56995230913162231" blue="0.89546698331832886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="shadowColor" red="0.31709900498390198" green="0.43500179052352905" blue="0.81781226396560669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="leading" secondItem="6ej-1u-Rl5" secondAttribute="leadingMargin" id="Cou-V5-VRq"/>
+                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="top" secondItem="6ej-1u-Rl5" secondAttribute="top" constant="8" id="wjl-tS-ule"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="teamName" destination="wuT-7a-MxL" id="881-T3-4DB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oZV-Kt-2CO" id="7WF-Ig-hg1"/>
+                                    <outlet property="delegate" destination="oZV-Kt-2CO" id="EfU-9n-Xvi"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.31709900498390198" green="0.43500179052352905" blue="0.81781226396560669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="centerY" secondItem="Bz6-qd-L25" secondAttribute="centerY" id="3ie-0H-zJ9"/>
-                            <constraint firstItem="tGp-9W-o3K" firstAttribute="leading" secondItem="3Of-bF-POe" secondAttribute="leading" id="50z-6q-gBw"/>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="centerY" secondItem="Bz6-qd-L25" secondAttribute="centerY" constant="-8" id="3ie-0H-zJ9"/>
+                            <constraint firstItem="tGp-9W-o3K" firstAttribute="leading" secondItem="3Of-bF-POe" secondAttribute="leading" constant="747" id="50z-6q-gBw"/>
                             <constraint firstItem="6LA-3U-AfU" firstAttribute="centerX" secondItem="DKH-3E-yiQ" secondAttribute="centerX" id="EhK-uK-tnU"/>
                             <constraint firstItem="KKC-f9-bEe" firstAttribute="centerX" secondItem="DKH-3E-yiQ" secondAttribute="centerX" id="GrG-1Z-Vz3"/>
-                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="top" secondItem="3Of-bF-POe" secondAttribute="bottom" constant="49" id="JqV-lN-z6I"/>
-                            <constraint firstItem="Bz6-qd-L25" firstAttribute="leading" secondItem="DKH-3E-yiQ" secondAttribute="leadingMargin" constant="386" id="Kng-hX-umQ"/>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="top" secondItem="3Of-bF-POe" secondAttribute="bottom" constant="26" id="JqV-lN-z6I"/>
+                            <constraint firstItem="Bz6-qd-L25" firstAttribute="leading" secondItem="DKH-3E-yiQ" secondAttribute="leadingMargin" constant="415" id="Kng-hX-umQ"/>
                             <constraint firstItem="Xca-Gj-sfA" firstAttribute="leading" secondItem="Bz6-qd-L25" secondAttribute="trailing" constant="8" symbolic="YES" id="SJ4-nG-VJF"/>
-                            <constraint firstItem="tGp-9W-o3K" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="top" constant="438" id="Yos-xe-Gs1"/>
-                            <constraint firstItem="3Of-bF-POe" firstAttribute="top" secondItem="KKC-f9-bEe" secondAttribute="bottom" constant="45" id="d4B-fi-VS9"/>
-                            <constraint firstItem="KKC-f9-bEe" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="topMargin" constant="-41" id="hv9-fK-8Uz"/>
-                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="bottom" secondItem="Bz6-qd-L25" secondAttribute="bottom" id="ljX-sb-eCW"/>
-                            <constraint firstItem="6LA-3U-AfU" firstAttribute="top" secondItem="tGp-9W-o3K" secondAttribute="bottom" constant="73" id="p2K-9e-xpA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Bz6-qd-L25" secondAttribute="trailing" constant="444" id="pHN-vL-g4R"/>
+                            <constraint firstItem="tGp-9W-o3K" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="top" constant="913" id="Yos-xe-Gs1"/>
+                            <constraint firstItem="3Of-bF-POe" firstAttribute="top" secondItem="KKC-f9-bEe" secondAttribute="bottom" constant="8" id="d4B-fi-VS9"/>
+                            <constraint firstItem="KKC-f9-bEe" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="topMargin" constant="28" id="hv9-fK-8Uz"/>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="bottom" secondItem="Bz6-qd-L25" secondAttribute="bottom" constant="-8" id="ljX-sb-eCW"/>
+                            <constraint firstItem="6LA-3U-AfU" firstAttribute="top" secondItem="tGp-9W-o3K" secondAttribute="bottom" constant="-423" id="p2K-9e-xpA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bz6-qd-L25" secondAttribute="trailing" constant="415" id="pHN-vL-g4R"/>
                             <constraint firstItem="KKC-f9-bEe" firstAttribute="centerX" secondItem="3Of-bF-POe" secondAttribute="centerX" id="w97-om-1Yj"/>
                             <constraint firstItem="3Of-bF-POe" firstAttribute="width" secondItem="KKC-f9-bEe" secondAttribute="width" id="zbK-u3-oci"/>
                         </constraints>

@@ -45,4 +45,10 @@ public struct GameState {
         self.teams += teams
         
     }
+    
+    mutating func SetCurrentQuestion(question:Question)->Void {
+        
+        self.currentQuestion = question
+        
+    }
 }
