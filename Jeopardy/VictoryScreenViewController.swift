@@ -48,9 +48,10 @@ class VictoryScreenViewController: UIViewController {
 //  var winningTeam = array[0]
 //  winnerAnnounced.text =   "You Rock,: \((winningTeam))"
 //    winnerScore.text = "You scored
-
+       
+        // delete later!
         var team1:Team = Team(name: "t1")
-        team1.score = 1
+        team1.score = 150
         teamInfo.append(team1)
         
         var team2:Team = Team(name: "t2")
@@ -62,21 +63,23 @@ class VictoryScreenViewController: UIViewController {
         teamInfo.append(team3)
         
         var team4:Team = Team(name: "t4")
-        team4.score = 30
+        team4.score = 300
         teamInfo.append(team4)
+        // end delete!
+        
         
         
         sortedTeams = teamInfo.sorted(by: { $0.score > $1.score })
-        winnerAnnounced.text =   "You Rock \((sortedTeams[0].name))!"
+        winnerAnnounced.text =   "The Winner is: \((sortedTeams[0].name))!"
         winnerScore.text = "You Scored \((sortedTeams[0].score))"
     }
     
     func otherPlaces(){
-        secondPlace.text = "Second Place: \((sortedTeams[1].name))"
+        secondPlace.text = "Second place goes to: \((sortedTeams[1].name))"
         
-        thirdPlace.text = "Third Place: \((sortedTeams[2].name))"
+        thirdPlace.text = "Third place goes to: \((sortedTeams[2].name))"
         
-        fourthPlace.text = "Fourth Place: \((sortedTeams[3].name))"
+        fourthPlace.text = "Fourth place goes to: \((sortedTeams[3].name))"
         
     }
     

@@ -10,7 +10,6 @@ import Foundation
 
 class JeopardyManager {
     
-    
     private(set) var questionRetriever: IRetrieveQuestions
     private(set) var gameState: GameState
     private var newTeamAddedHandler: (([String])->Void)?
