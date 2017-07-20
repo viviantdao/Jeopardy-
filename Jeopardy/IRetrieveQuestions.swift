@@ -12,6 +12,8 @@ protocol IRetrieveQuestions{
     
     func questionForCategory(_ category:String, pointValue:Int, markAsAsked: Bool) -> Question
     
+    func questionForCategoryBasedOnBsIndexSystemNeedlesslyCouplingImplementations(x:Int, y:Int)->Question
+    
     var countOfQuestions: Int { get }
     
     var categories: [String] { get }

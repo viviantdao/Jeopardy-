@@ -20,16 +20,17 @@ class VictoryScreenViewController: UIViewController {
     
     @IBOutlet weak var fourthPlace: UILabel!
 
-    var teamInfo:[Team] = []
     var sortedTeams:[Team] = []
+    let manager = AppDelegate.Manager
 
     
     override func viewWillAppear(_ animated: Bool) {
         // delete later!
-        createTestData()
+//        createTestData()
         // end delete!
         
-        sortedTeams = teamInfo.sorted(by: { $0.score > $1.score })
+        let teams = manager.GetTeamResults()
+        sortedTeams = teams.sorted(by: { $0.score > $1.score })
         highScore()
         otherPlaces()
     }
@@ -45,21 +46,21 @@ class VictoryScreenViewController: UIViewController {
         fourthPlace.text = "Fourth place goes to: \((sortedTeams[3].name))"
     }
     
-    func createTestData() {
-        var team1:Team = Team(name: "t1")
-        team1.score = 150
-        teamInfo.append(team1)
-        
-        var team2:Team = Team(name: "t2")
-        team2.score = 10
-        teamInfo.append(team2)
-        
-        var team3:Team = Team(name: "t3")
-        team3.score = 100
-        teamInfo.append(team3)
-        
-        var team4:Team = Team(name: "t4")
-        team4.score = 300
-        teamInfo.append(team4)
-    }
+//    func createTestData() {
+//        var team1:Team = Team(name: "t1")
+//        team1.score = 150
+//        teamInfo.append(team1)
+//        
+//        var team2:Team = Team(name: "t2")
+//        team2.score = 10
+//        teamInfo.append(team2)
+//        
+//        var team3:Team = Team(name: "t3")
+//        team3.score = 100
+//        teamInfo.append(team3)
+//        
+//        var team4:Team = Team(name: "t4")
+//        team4.score = 300
+//        teamInfo.append(team4)
+//    }
 }
