@@ -17,7 +17,7 @@ class AnsweringScreenViewController: UIViewController {
     
     @IBOutlet weak var incorrectButton: UIButton!
     
-    
+    @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var team2Label: UILabel!
     
@@ -30,7 +30,8 @@ class AnsweringScreenViewController: UIViewController {
     @IBOutlet weak var popUpLabel: UILabel!
     
     var countDownTimer: Timer?
-    var fullTime = 10
+    
+    var fullTime: Int = 10
     var timeRemainingInSeconds = 10
     
     var group1 = Team(name: "Team COJO")
@@ -38,9 +39,9 @@ class AnsweringScreenViewController: UIViewController {
     var group3 = Team(name: "Team Echo the Question")
     var group4 = Team(name: "Team KKM")
     
-    var teams : [Team] = []
+    var teams : [Team] = AppDelegate.Manager.gameState.teams
     
-    var numberQuestionAsked: Int = 0
+    var questionCount: Int = 0
 
     
     override func viewDidLoad() {
@@ -52,7 +53,8 @@ class AnsweringScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         popUpLabel.layer.backgroundColor = UIColor.white.cgColor
         popUpLabel.layer.cornerRadius = 10;
-//        popUpLabel.textColor = .black
+        questionLabel.text = ""
+        
         group1.score = 2200
         group2.score = 1500
         group3.score = 1750
@@ -67,23 +69,11 @@ class AnsweringScreenViewController: UIViewController {
         setLabels()
         startQuestion()
         
-//        for group in teams {
-//            if group.canAnswer {
-//                teamHighLight(team: group)
-//            }
-//        }
-//        
-//        self.TimeRemainingLabel.textColor = .white
-//        self.TimeRemainingLabel.text = "\(self.timeRemainingInSeconds) seconds remaining"
-//        
-//
-//        
-//        self.timeRemainingInSeconds = fullTime / (numberQuestionAsked * 2)
-//        self.countDownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.countdownTimerFired), userInfo: nil, repeats: true)
     }
 
     func startQuestion() {
         popUpLabel.isHidden = true
+        questionLabel.isHidden = false
         
         for group in teams {
             if group.canAnswer {
@@ -91,10 +81,12 @@ class AnsweringScreenViewController: UIViewController {
                 popUpLabel.text = " Please indicate if \(group.name) answered correctly "
             }
         }
-        var timeDivide = numberQuestionAsked * 2
+        
+        var timeDivide = questionCount * 2
         if timeDivide == 0 {
             timeDivide = 1
         }
+       
         self.timeRemainingInSeconds = fullTime / timeDivide
         self.TimeRemainingLabel.textColor = .white
         self.TimeRemainingLabel.text = "\(timeRemainingInSeconds) seconds remaining"
@@ -108,13 +100,13 @@ class AnsweringScreenViewController: UIViewController {
     
     func teamHighLight(team: Team) {
         switch team.name {
-        case group1.name:
+        case teams[0].name:
             team1Label.textColor = .white
-        case group2.name:
+        case teams[1].name:
             team2Label.textColor = .white
-        case group3.name:
+        case teams[2].name:
             team3Label.textColor = .white
-        case group4.name:
+        case teams[3].name:
             team4Label.textColor = .white
         default:
             break
@@ -126,8 +118,10 @@ class AnsweringScreenViewController: UIViewController {
         //performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
     }
     
+    
+    
     @IBAction func incorrectPressed(_ sender: Any) {
-        numberQuestionAsked += 1
+        questionCount += 1
         self.countDownTimer?.invalidate()
         self.countDownTimer = nil
         startQuestion()
@@ -164,6 +158,7 @@ class AnsweringScreenViewController: UIViewController {
             self.countDownTimer = nil
             self.TimeRemainingLabel.text = "Time is up"
             popUpLabel.isHidden = false
+            questionLabel.isHidden = true
         }
         
     }
