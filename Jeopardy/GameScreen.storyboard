@@ -1,11 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="ipad12_9" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HT3-cV-oyh">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="gyparody.ttf">
+            <string>Gyparody</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Game Screen View Controller-->
+        <scene sceneID="BcE-fK-XNc">
+            <objects>
+                <viewController id="HT3-cV-oyh" customClass="GameScreenViewController" customModule="Jeopardy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="00P-Du-ZnF"/>
+                        <viewControllerLayoutGuide type="bottom" id="cUN-rx-DfY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xJE-ya-QYN">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQ4-ZC-8MT">
+                                <rect key="frame" x="0.0" y="80" width="1024" height="628"/>
+                                <connections>
+                                    <segue destination="qiG-aB-CDO" kind="embed" id="1dA-R5-p0W"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeopardy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-Fl-2J0">
+                                <rect key="frame" x="401.5" y="9" width="221" height="63"/>
+                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ebV-Fl-2J0" firstAttribute="centerX" secondItem="xJE-ya-QYN" secondAttribute="centerX" id="7cK-bz-r4H"/>
+                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="top" secondItem="00P-Du-ZnF" secondAttribute="bottom" constant="60" id="P5V-hp-PXH"/>
+                            <constraint firstItem="cUN-rx-DfY" firstAttribute="top" secondItem="BQ4-ZC-8MT" secondAttribute="bottom" constant="60" id="aRy-4v-Wha"/>
+                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="leading" secondItem="xJE-ya-QYN" secondAttribute="leading" id="dHq-eb-mvs"/>
+                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="top" secondItem="ebV-Fl-2J0" secondAttribute="bottom" constant="8" id="mY5-HS-S41"/>
+                            <constraint firstItem="ebV-Fl-2J0" firstAttribute="top" secondItem="00P-Du-ZnF" secondAttribute="bottom" constant="-11" id="pzI-Lj-Ygu"/>
+                            <constraint firstItem="BQ4-ZC-8MT" firstAttribute="centerX" secondItem="ebV-Fl-2J0" secondAttribute="centerX" id="z9e-Af-oCD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="BQ4-ZC-8MT" id="NSh-lp-U69"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y71-5w-Nb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48.6328125" y="-796.875"/>
+        </scene>
+        <!--Questions Collection View Controller-->
+        <scene sceneID="ZK2-ff-JUK">
+            <objects>
+                <collectionViewController id="qiG-aB-CDO" customClass="QuestionsCollectionViewController" customModule="Jeopardy" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="nSQ-Xn-aIp">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="628"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AKo-Yt-dkq">
+                            <size key="itemSize" width="178" height="89"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="4" maxX="10" maxY="4"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="iQg-Ja-qWV">
+                                <rect key="frame" x="10" y="4" width="178" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="178" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-ws-xXo">
+                                            <rect key="frame" x="0.0" y="0.0" width="178" height="89"/>
+                                            <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="36"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.5979122519493103" green="0.91924494504928589" blue="0.55457812547683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2Sr-ws-xXo" firstAttribute="top" secondItem="iQg-Ja-qWV" secondAttribute="top" id="D7p-YX-LfS"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Sr-ws-xXo" secondAttribute="bottom" id="Pue-Us-hfw"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Sr-ws-xXo" secondAttribute="trailing" id="uGj-Ps-JNn"/>
+                                    <constraint firstItem="2Sr-ws-xXo" firstAttribute="leading" secondItem="iQg-Ja-qWV" secondAttribute="leading" id="zNO-LP-gVO"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="qiG-aB-CDO" id="V9d-Y2-bxi"/>
+                            <outlet property="delegate" destination="qiG-aB-CDO" id="nXo-6p-fX6"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SR-Cl-X99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665.44655929721807" y="-796.875"/>
+        </scene>
+    </scenes>
 </document>

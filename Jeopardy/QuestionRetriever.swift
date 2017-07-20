@@ -8,14 +8,54 @@
 
 import Foundation
 
-class QuestionRetriever {
-    fileprivate(set) var countOfQuestions: Int = 0
-    fileprivate(set) var categories: [String] = []
+final class QuestionRetriever: IRetrieveQuestions {
+    
+    private var questions: [Question] = []
     
     init(path: String) {
+        
+        let questionDict = NSDictionary(contentsOfFile: path)
+        
+        for (_, key) in questionDict!{
+            let categoryKey = key as! [String:Any]
+            for question in categoryKey["Questions"] as! [[String:Any]]{
+                questions.append(Question(text: question["text"] as! String,
+                                          time: question["time"] as! Int,
+                                          pointValue: question["pointValue"] as! Int,
+                                          category: question["category"] as! String))
+            }
+        }
     }
     
-    func questionForCategory(_ category:String, index:Int, markAsAsked:Bool = false) -> Question {
-        return Question(text: "question", time: 0, pointValue: 0, category: "category")
+    var countOfQuestions: Int {
+        
+        get { return self.questions.count }
+        
+    }
+    
+    var categories: [String] {
+        
+        get{
+            
+            return self.questions.reduce([String](), { (array, question) -> [String] in
+                if(!array.contains(question.category)){
+                    return array + [question.category]
+                }
+                return array
+            })
+        }
+        
+    }
+    
+    
+    
+    func questionForCategory(_ category:String, pointValue:Int, markAsAsked: Bool = false) -> Question {
+        
+        let questionResult = self.questions.filter { (question) -> Bool in
+            return question.category == category && question.pointValue == pointValue
+        }
+        var question = questionResult[0]
+        question.hasBeenAsked = markAsAsked
+        return question
     }
 }

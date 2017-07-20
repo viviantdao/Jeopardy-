@@ -21,17 +21,14 @@ class QuestionRetrieverTests: XCTestCase {
         super.tearDown()
     }
     
-    func testInitializeCategories() {
+    func testloadsCategoriesAndReturnsCorrectCount() {
         let testBundle = Bundle(for: QuestionRetrieverTests.self)
         let path = testBundle.path(forResource: "TestQuestionData", ofType: "plist")
         let qr = QuestionRetriever(path: path!)
+        let categories = qr.categories
         
-        XCTAssertEqual(qr.categories.count, 2)
-        
-        if (qr.categories.count == 2) {
-            XCTAssertEqual(qr.categories[0], "Category1")
-            XCTAssertEqual(qr.categories[1], "Category0")
-        }
+        XCTAssertEqual(categories.count, 3)
+    
     }
     
     func testInitializeQuestions() {
@@ -50,17 +47,17 @@ class QuestionRetrieverTests: XCTestCase {
         XCTAssertEqual(qr.countOfQuestions, 4)
 
         if (qr.countOfQuestions == 4) {
-            self.verifyQuestion(qr.questionForCategory("Category0", index: 0),
+            self.verifyQuestion(qr.questionForCategory("Category0", pointValue: 100),
                                 actual: Question(text: "Question0 in Category0", time: 60, pointValue: 100, category: "Category0"))
-            self.verifyQuestion(qr.questionForCategory("Category0", index: 1),
+            self.verifyQuestion(qr.questionForCategory("Category0", pointValue: 200),
                                 actual: Question(text: "Question1 in Category0", time: 120, pointValue: 200, category: "Category0"))
-            self.verifyQuestion(qr.questionForCategory("Category1", index: 0),
+            self.verifyQuestion(qr.questionForCategory("Category1", pointValue: 100),
                                 actual: Question(text: "Question0 in Category1", time: 60, pointValue: 100, category: "Category1"))
-            self.verifyQuestion(qr.questionForCategory("Category1", index: 1),
+            self.verifyQuestion(qr.questionForCategory("Category1", pointValue: 200),
                                 actual: Question(text: "Question1 in Category1", time: 120, pointValue: 200, category: "Category1"))
         }
     }
-    
+
     func testQuestionForCategoryMarkedAsAsked() {
         let testBundle = Bundle(for: QuestionRetrieverTests.self)
         let path = testBundle.path(forResource: "TestQuestionData", ofType: "plist")
@@ -73,16 +70,16 @@ class QuestionRetrieverTests: XCTestCase {
             question.hasBeenAsked = true
             
             self.verifyQuestion(question,
-                                actual: qr.questionForCategory("Category0", index: 0, markAsAsked: true))
+                                actual: qr.questionForCategory("Category0", pointValue: 100, markAsAsked: true))
             self.verifyQuestion(Question(text: "Question1 in Category0", time: 120, pointValue: 200, category: "Category0"),
-                                actual: qr.questionForCategory("Category0", index: 1))
+                                actual: qr.questionForCategory("Category0", pointValue: 200))
             self.verifyQuestion(Question(text: "Question0 in Category1", time: 60, pointValue: 100, category: "Category1"),
-                                actual: qr.questionForCategory("Category1", index: 0))
+                                actual: qr.questionForCategory("Category1", pointValue: 100))
             self.verifyQuestion(Question(text: "Question1 in Category1", time: 120, pointValue: 200, category: "Category1"),
-                                actual: qr.questionForCategory("Category1", index: 1))
+                                actual: qr.questionForCategory("Category1", pointValue: 200))
         }
     }
-    
+
     fileprivate func verifyQuestion(_ expected:Question, actual:Question) {
         XCTAssertEqual(expected.category, actual.category)
         XCTAssertEqual(expected.hasBeenAsked, actual.hasBeenAsked)
