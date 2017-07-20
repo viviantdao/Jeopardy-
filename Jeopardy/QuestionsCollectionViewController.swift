@@ -12,13 +12,14 @@ private let reuseIdentifier = "cell"
 private var count: Int = 0
 
 
-private var screenX :Int = 950
+private var screenX :Int = 740
 private var screenY :Int = 580
+
 
 //private var screenX2 : Int
 
 
-private var insetRatio: Double = 0.012
+private var insetRatio: Double = 0.02
 
 
 
@@ -26,12 +27,12 @@ private var insetRatio: Double = 0.012
 class QuestionsCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var numberOfCategories = AppDelegate.Manager.getCategories().count
-    //var numberOfQuestions = AppDelegate.Manager.
+    
     var categories: [String] = AppDelegate.Manager.getCategories()
     
     var teams:[String] = [] //GET TEAM LIST
     
-    
+    var screenWidth = 0
 
     var pressed: [[Bool]] = []
     
@@ -41,11 +42,16 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         
         
                     //when someone accuses you of something...
-        self.pressed = [[false,false,false,false,false],
-                        [false,false,false,false,false],
-                        [false,false,false,false,false],
-                        [false,false,false,false,false],
-                        [false,false,false,false,false]]
+        self.pressed = [[false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],
+                        [false,false,false,false,false,false,false,false,false,false],]
         
         
         
@@ -58,6 +64,11 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.screenWidth = Int(self.collectionView!.frame.width)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,12 +86,14 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
 
     // MARK: UICollectionViewDataSource
 
+    
+    ////CATEGORIES
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return numberOfCategories
     }
 
-
+    /////QUESTIONS
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return numberOfCategories
@@ -89,7 +102,8 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
     //SET SIZES FOR CELLS based on category & question numbers
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (screenX/numberOfCategories) - Int(Double(screenX)*insetRatio), height: ((screenY-(numberOfCategories))/numberOfCategories) )
+        return CGSize(width: (screenWidth/(numberOfCategories)) - Int(Double(screenWidth)*insetRatio) , height: ((screenY-(numberOfCategories))/numberOfCategories) )
+        //(width: (screenX/categories) - Int(Double(screenX)*insetRatio), height: ((screenY-(questions))/questions) - 15)
         
     }
 
