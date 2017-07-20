@@ -20,9 +20,9 @@ class VictoryScreenViewController: UIViewController {
     
     @IBOutlet weak var fourthPlace: UILabel!
 
-    var sortedTeams:[Team] = []
+    
     let manager = AppDelegate.Manager
-
+    var sortedTeams:[Team] = []
     
     override func viewWillAppear(_ animated: Bool) {
         // delete later!
