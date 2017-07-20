@@ -31,8 +31,8 @@ class AnsweringScreenViewController: UIViewController {
     
     var countDownTimer: Timer?
     
-    var fullTime: Int = 10
-    var timeRemainingInSeconds = 10
+    var fullTime: Int = 40
+    var timeRemainingInSeconds = 40
     
     var group1 = Team(name: "Team COJO")
     var group2 = Team(name: "Team X")
@@ -42,7 +42,7 @@ class AnsweringScreenViewController: UIViewController {
     var teams : [Team] = AppDelegate.Manager.gameState.teams
     
     var questionCount: Int = 0
-
+    var timeDivide = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ class AnsweringScreenViewController: UIViewController {
         
         group1.score = 2200
         group2.score = 1500
-        group3.score = 1750
+        group3.score = 4500
         group4.score = 2050
         
         teams.append(group1)
@@ -65,7 +65,7 @@ class AnsweringScreenViewController: UIViewController {
         teams.append(group3)
         teams.append(group4)
 
-        teams[2].canAnswer = true
+        teams[1].canAnswer = true
         setLabels()
         startQuestion()
         
@@ -81,10 +81,12 @@ class AnsweringScreenViewController: UIViewController {
                 popUpLabel.text = " Please indicate if \(group.name) answered correctly "
             }
         }
+        timeDivide = 1
         
-        var timeDivide = questionCount * 2
-        if timeDivide == 0 {
-            timeDivide = 1
+        if questionCount != 0 {
+            for _ in 1...questionCount {
+                timeDivide *= 2
+            }
         }
        
         self.timeRemainingInSeconds = fullTime / timeDivide
@@ -165,16 +167,16 @@ class AnsweringScreenViewController: UIViewController {
     
     func updateTimeRemaining() {
         self.TimeRemainingLabel.text = "\(timeRemainingInSeconds) seconds remaining"
-        if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds / 6)) {
+        if (self.timeRemainingInSeconds <= 5) {
             self.TimeRemainingLabel.textColor = .red
         }
-        else if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds / 3)) {
+        else if (self.timeRemainingInSeconds <= 10) {
             self.TimeRemainingLabel.textColor = .orange
         }
-        else if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds / 2)) {
+        else if (self.timeRemainingInSeconds <= 15) {
             self.TimeRemainingLabel.textColor = .yellow
         }
-        else if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds * 3 / 4)){
+        else if (self.timeRemainingInSeconds <= 30){
             self.TimeRemainingLabel.textColor = .green
         }
         else {
