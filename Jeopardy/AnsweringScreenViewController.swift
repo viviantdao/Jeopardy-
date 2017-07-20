@@ -29,9 +29,10 @@ class AnsweringScreenViewController: UIViewController {
     
     @IBOutlet weak var popUpLabel: UILabel!
     
+    let question = AppDelegate.Manager.GetCurrentQuestion()
     var countDownTimer: Timer?
     
-    var fullTime: Int = 40
+//    var fullTime: Int = 40
     var timeRemainingInSeconds = 40
     
     var group1 = Team(name: "Team COJO")
@@ -53,7 +54,8 @@ class AnsweringScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         popUpLabel.layer.backgroundColor = UIColor.white.cgColor
         popUpLabel.layer.cornerRadius = 10;
-        questionLabel.text = ""
+        questionLabel.text = question.text
+        
         
         group1.score = 2200
         group2.score = 1500
@@ -89,7 +91,7 @@ class AnsweringScreenViewController: UIViewController {
             }
         }
        
-        self.timeRemainingInSeconds = fullTime / timeDivide
+        self.timeRemainingInSeconds = question.time / timeDivide
         self.TimeRemainingLabel.textColor = .white
         self.TimeRemainingLabel.text = "\(timeRemainingInSeconds) seconds remaining"
         
