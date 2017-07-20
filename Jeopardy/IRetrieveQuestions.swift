@@ -16,4 +16,6 @@ protocol IRetrieveQuestions{
     
     var categories: [String] { get }
     
+    var countOfQuestionsPerCategory:Int { get }
+    
 }

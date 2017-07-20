@@ -11,6 +11,7 @@ import Foundation
 final class QuestionRetriever: IRetrieveQuestions {
     
     private var questions: [Question] = []
+    private var numberOfQuestionsPerCategory:Int = 0
     
     init(path: String) {
         
@@ -33,6 +34,25 @@ final class QuestionRetriever: IRetrieveQuestions {
         
     }
     
+    var countOfQuestionsPerCategory:Int {
+        
+        get {
+            
+            if self.numberOfQuestionsPerCategory != 0{
+                return self.numberOfQuestionsPerCategory
+            }
+            
+            let category = self.categories[0]
+            
+            self.numberOfQuestionsPerCategory
+                = self.questions.filter({ (question) -> Bool in
+                    question.category == category
+                }).count
+            
+            return self.numberOfQuestionsPerCategory
+        }
+    }
+    
     var categories: [String] {
         
         get{
@@ -46,7 +66,6 @@ final class QuestionRetriever: IRetrieveQuestions {
         }
         
     }
-    
     
     
     func questionForCategory(_ category:String, pointValue:Int, markAsAsked: Bool = false) -> Question {
