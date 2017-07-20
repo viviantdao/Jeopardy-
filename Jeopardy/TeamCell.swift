@@ -10,5 +10,7 @@ import Foundation
 import UIKit
 
 class TeamCell: UITableViewCell{
+    
     @IBOutlet weak var teamName: UILabel!
+    
 }

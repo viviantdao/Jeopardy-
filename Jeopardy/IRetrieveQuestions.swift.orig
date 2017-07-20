@@ -10,11 +10,7 @@ import Foundation
 
 protocol IRetrieveQuestions{
     
-<<<<<<< HEAD
-    func questionForCategory(_ category:String, pointValue:Int, markAsAsked: Bool) -> Question
-=======
     func questionForCategory(_ category:String, index:Int, markAsAsked:Bool) -> Question
->>>>>>> bbe247dc3c63a0006d0dfca30321d109c6e46ff2
     
     var countOfQuestions: Int { get }
     

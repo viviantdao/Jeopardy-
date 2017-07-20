@@ -20,6 +20,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBAction func addTeamName(_ sender: Any) {
         jeopardy.AddNewTeam(name: (enterTeamName?.text)!)
+        self.enterTeamName?.text = ""
     }
     
    
