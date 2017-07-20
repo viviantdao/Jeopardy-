@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oZV-Kt-2CO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oZV-Kt-2CO">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,13 +38,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter team name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-qd-L25">
-                                <rect key="frame" x="406" y="282" width="496" height="55"/>
+                                <rect key="frame" x="406" y="281.5" width="496" height="55"/>
                                 <color key="textColor" red="1" green="0.72941176470000002" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the names of 4 teams to begin your game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
-                                <rect key="frame" x="100" y="201" width="1167" height="32"/>
+                                <rect key="frame" x="100" y="201" width="1167" height="31.5"/>
                                 <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="32"/>
                                 <color key="textColor" red="0.26050364971160889" green="0.083687253296375275" blue="0.54292809963226318" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-7a-MxL">
-                                                    <rect key="frame" x="59" y="0.0" width="42" height="21"/>
+                                                    <rect key="frame" x="552" y="0.0" width="979" height="91"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -73,9 +73,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wuT-7a-MxL" firstAttribute="top" secondItem="6ej-1u-Rl5" secondAttribute="top" id="FmT-3J-xER"/>
-                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="leading" secondItem="6ej-1u-Rl5" secondAttribute="leadingMargin" constant="51" id="lTe-tX-X8S"/>
+                                                <constraint firstItem="wuT-7a-MxL" firstAttribute="leading" secondItem="6ej-1u-Rl5" secondAttribute="leadingMargin" constant="544" id="lTe-tX-X8S"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="wuT-7a-MxL" firstAttribute="centerX" secondItem="uay-9m-m7G" secondAttribute="centerX" constant="493" id="5Yb-Jx-KcR"/>
+                                            <constraint firstItem="wuT-7a-MxL" firstAttribute="centerY" secondItem="uay-9m-m7G" secondAttribute="centerY" id="WGP-0j-9oT"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="teamName" destination="wuT-7a-MxL" id="881-T3-4DB"/>
                                         </connections>
@@ -97,7 +101,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-Gj-sfA">
-                                <rect key="frame" x="910" y="282" width="49" height="55"/>
+                                <rect key="frame" x="910" y="281.5" width="49" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="fdO-zL-q2U"/>
                                 </constraints>
