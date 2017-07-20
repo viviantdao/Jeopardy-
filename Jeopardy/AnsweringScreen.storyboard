@@ -39,13 +39,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4Q-bM-RgO">
-                                <rect key="frame" x="397" y="983" width="66" height="21"/>
+                                <rect key="frame" x="365" y="983" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 4: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANQ-Ri-EI1">
-                                <rect key="frame" x="1204" y="983" width="66" height="21"/>
+                                <rect key="frame" x="1280" y="983" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,9 +56,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-Hy-dPu">
-                                <rect key="frame" x="641.5" y="320" width="84.5" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-Hy-dPu">
+                                <rect key="frame" x="470" y="320" width="426" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,7 +70,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 3: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-Fd-gmA">
-                                <rect key="frame" x="853" y="982" width="66" height="21"/>
+                                <rect key="frame" x="935" y="982" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,20 +79,21 @@
                         <color key="backgroundColor" red="0.0" green="0.58558213710784912" blue="0.69987893104553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1yP-eF-m0A" firstAttribute="top" secondItem="Zju-7m-cZK" secondAttribute="bottom" id="6rw-wF-ra5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhv-Hy-dPu" secondAttribute="trailing" constant="450" id="FCc-vY-rfU"/>
                             <constraint firstItem="fRH-bO-m45" firstAttribute="top" secondItem="Zju-7m-cZK" secondAttribute="bottom" id="Jpe-RP-fud"/>
                             <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="ANQ-Ri-EI1" secondAttribute="bottom" constant="20" id="LFf-Zm-RN1"/>
                             <constraint firstItem="g7m-fA-lWE" firstAttribute="top" secondItem="Zju-7m-cZK" secondAttribute="bottom" id="QQF-W9-Tx7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="g7m-fA-lWE" secondAttribute="leading" id="Sdm-fq-QxY"/>
-                            <constraint firstItem="x4Q-bM-RgO" firstAttribute="leading" secondItem="w9k-SS-XoP" secondAttribute="leadingMargin" constant="377" id="Uh2-Jk-3gX"/>
+                            <constraint firstItem="x4Q-bM-RgO" firstAttribute="leading" secondItem="w9k-SS-XoP" secondAttribute="leadingMargin" constant="345" id="Uh2-Jk-3gX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1yP-eF-m0A" secondAttribute="trailing" id="Uu1-x9-5nv"/>
                             <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="1AA-Fd-gmA" secondAttribute="bottom" constant="21" id="YbB-Dc-bFb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ANQ-Ri-EI1" secondAttribute="trailing" constant="76" id="Zbg-9j-zhu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ANQ-Ri-EI1" secondAttribute="trailing" id="Zbg-9j-zhu"/>
                             <constraint firstItem="fRH-bO-m45" firstAttribute="centerX" secondItem="w9k-SS-XoP" secondAttribute="centerX" id="b9f-1m-1Nm"/>
                             <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="P3r-NX-ysq" secondAttribute="bottom" constant="20" id="hsI-l9-HYG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="P3r-NX-ysq" secondAttribute="leading" id="jik-B6-AcU"/>
-                            <constraint firstItem="Zhv-Hy-dPu" firstAttribute="centerX" secondItem="w9k-SS-XoP" secondAttribute="centerX" id="oTl-xK-uaI"/>
                             <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="x4Q-bM-RgO" secondAttribute="bottom" constant="20" id="vKy-Bf-lbe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1AA-Fd-gmA" secondAttribute="trailing" constant="427" id="xEc-B9-APn"/>
+                            <constraint firstItem="Zhv-Hy-dPu" firstAttribute="leading" secondItem="w9k-SS-XoP" secondAttribute="leadingMargin" constant="450" id="vUc-Te-Kfk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1AA-Fd-gmA" secondAttribute="trailing" constant="345" id="xEc-B9-APn"/>
                             <constraint firstItem="Zhv-Hy-dPu" firstAttribute="top" secondItem="fRH-bO-m45" secondAttribute="bottom" constant="258" id="y6E-xw-pxx"/>
                         </constraints>
                     </view>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class AnsweringScreenViewController: UIViewController {
 
@@ -29,13 +30,13 @@ class AnsweringScreenViewController: UIViewController {
     @IBOutlet weak var popUpLabel: UILabel!
     
     var countDownTimer: Timer?
-    var fullTime = 30
-    var timeRemainingInSeconds = 30
+    var fullTime = 10
+    var timeRemainingInSeconds = 10
     
-    var group1 = Team(name: "Team 1")
-    var group2 = Team(name: "Team 2")
-    var group3 = Team(name: "Team 3")
-    var group4 = Team(name: "Team 4")
+    var group1 = Team(name: "Team COJO")
+    var group2 = Team(name: "Team X")
+    var group3 = Team(name: "Team Echo the Question")
+    var group4 = Team(name: "Team KKM")
     
     var teams : [Team] = []
     
@@ -49,8 +50,9 @@ class AnsweringScreenViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        popUpLabel.text = "Please indicate if team 1 answered correctly"
-        
+        popUpLabel.layer.backgroundColor = UIColor.white.cgColor
+        popUpLabel.layer.cornerRadius = 10;
+//        popUpLabel.textColor = .black
         group1.score = 2200
         group2.score = 1500
         group3.score = 1750
@@ -82,10 +84,11 @@ class AnsweringScreenViewController: UIViewController {
 
     func startQuestion() {
         popUpLabel.isHidden = true
+        
         for group in teams {
             if group.canAnswer {
                 teamHighLight(team: group)
-                popUpLabel.text = "Please inidicate if \(group.name) answered correctly"
+                popUpLabel.text = " Please indicate if \(group.name) answered correctly "
             }
         }
         var timeDivide = numberQuestionAsked * 2
