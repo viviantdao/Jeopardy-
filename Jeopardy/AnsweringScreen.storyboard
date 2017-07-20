@@ -1,11 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bYs-Yp-vbK">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Answering Screen View Controller-->
+        <scene sceneID="8bJ-A2-qXR">
+            <objects>
+                <viewController id="bYs-Yp-vbK" customClass="AnsweringScreenViewController" customModule="Jeopardy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zju-7m-cZK"/>
+                        <viewControllerLayoutGuide type="bottom" id="AEW-SR-19E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w9k-SS-XoP">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRH-bO-m45">
+                                <rect key="frame" x="640.5" y="20" width="85" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yP-eF-m0A">
+                                <rect key="frame" x="1248" y="20" width="98" height="128"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="if_Tick_Mark_Dark_1398912">
+                                    <color key="titleColor" red="0.0" green="0.66729910709999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="correctPressed:" destination="bYs-Yp-vbK" eventType="touchUpInside" id="jmz-oG-Vgk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4Q-bM-RgO">
+                                <rect key="frame" x="365" y="983" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 4: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANQ-Ri-EI1">
+                                <rect key="frame" x="1280" y="983" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3r-NX-ysq">
+                                <rect key="frame" x="20" y="983" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-Hy-dPu">
+                                <rect key="frame" x="470" y="320" width="426" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-fA-lWE">
+                                <rect key="frame" x="20" y="20" width="98" height="128"/>
+                                <state key="normal" backgroundImage="if_Close_Icon_Dark_1398917"/>
+                                <connections>
+                                    <action selector="incorrectPressed:" destination="bYs-Yp-vbK" eventType="touchUpInside" id="2YX-Bj-lEK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 3: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AA-Fd-gmA">
+                                <rect key="frame" x="935" y="982" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58558213710784912" blue="0.69987893104553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1yP-eF-m0A" firstAttribute="top" secondItem="Zju-7m-cZK" secondAttribute="bottom" id="6rw-wF-ra5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhv-Hy-dPu" secondAttribute="trailing" constant="450" id="FCc-vY-rfU"/>
+                            <constraint firstItem="fRH-bO-m45" firstAttribute="top" secondItem="Zju-7m-cZK" secondAttribute="bottom" id="Jpe-RP-fud"/>
+                            <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="ANQ-Ri-EI1" secondAttribute="bottom" constant="20" id="LFf-Zm-RN1"/>
+                            <constraint firstItem="g7m-fA-lWE" firstAttribute="top" secondItem="Zju-7m-cZK" secondAttribute="bottom" id="QQF-W9-Tx7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="g7m-fA-lWE" secondAttribute="leading" id="Sdm-fq-QxY"/>
+                            <constraint firstItem="x4Q-bM-RgO" firstAttribute="leading" secondItem="w9k-SS-XoP" secondAttribute="leadingMargin" constant="345" id="Uh2-Jk-3gX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1yP-eF-m0A" secondAttribute="trailing" id="Uu1-x9-5nv"/>
+                            <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="1AA-Fd-gmA" secondAttribute="bottom" constant="21" id="YbB-Dc-bFb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ANQ-Ri-EI1" secondAttribute="trailing" id="Zbg-9j-zhu"/>
+                            <constraint firstItem="fRH-bO-m45" firstAttribute="centerX" secondItem="w9k-SS-XoP" secondAttribute="centerX" id="b9f-1m-1Nm"/>
+                            <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="P3r-NX-ysq" secondAttribute="bottom" constant="20" id="hsI-l9-HYG"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="P3r-NX-ysq" secondAttribute="leading" id="jik-B6-AcU"/>
+                            <constraint firstItem="AEW-SR-19E" firstAttribute="top" secondItem="x4Q-bM-RgO" secondAttribute="bottom" constant="20" id="vKy-Bf-lbe"/>
+                            <constraint firstItem="Zhv-Hy-dPu" firstAttribute="leading" secondItem="w9k-SS-XoP" secondAttribute="leadingMargin" constant="450" id="vUc-Te-Kfk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1AA-Fd-gmA" secondAttribute="trailing" constant="345" id="xEc-B9-APn"/>
+                            <constraint firstItem="Zhv-Hy-dPu" firstAttribute="top" secondItem="fRH-bO-m45" secondAttribute="bottom" constant="258" id="y6E-xw-pxx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TimeRemainingLabel" destination="fRH-bO-m45" id="j0b-Mp-HaP"/>
+                        <outlet property="correctButton" destination="1yP-eF-m0A" id="kfi-ht-96u"/>
+                        <outlet property="incorrectButton" destination="g7m-fA-lWE" id="l84-0k-0Im"/>
+                        <outlet property="popUpLabel" destination="Zhv-Hy-dPu" id="kHi-tk-0Wo"/>
+                        <outlet property="team1Label" destination="P3r-NX-ysq" id="NMv-FS-D2k"/>
+                        <outlet property="team2Label" destination="x4Q-bM-RgO" id="FmP-Q5-iPL"/>
+                        <outlet property="team3Label" destination="1AA-Fd-gmA" id="ePN-ln-wnW"/>
+                        <outlet property="team4Label" destination="ANQ-Ri-EI1" id="e4M-ja-Uyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3b-8n-Zug" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.979502196193259" y="28.710937499999996"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="if_Close_Icon_Dark_1398917" width="98" height="128"/>
+        <image name="if_Tick_Mark_Dark_1398912" width="98" height="128"/>
+    </resources>
 </document>
