@@ -33,17 +33,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter team name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bz6-qd-L25">
-                                <rect key="frame" x="435" y="330" width="496" height="55"/>
+                                <rect key="frame" x="435" y="401" width="496" height="55"/>
                                 <color key="textColor" red="0.26597154140472412" green="0.56995230913162231" blue="0.89546698331832886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter the names of 4 teams " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
-                                <rect key="frame" x="100" y="258" width="1167" height="38"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="32"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LA-3U-AfU">
                                 <rect key="frame" x="652.5" y="890" width="61" height="53"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="34"/>
@@ -55,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xca-Gj-sfA">
-                                <rect key="frame" x="939" y="322" width="49" height="55"/>
+                                <rect key="frame" x="939" y="393" width="49" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="fdO-zL-q2U"/>
                                 </constraints>
@@ -68,7 +62,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="91" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-9W-o3K">
-                                <rect key="frame" x="847" y="913" width="327" height="400"/>
+                                <rect key="frame" x="1039" y="616" width="327" height="400"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="5Ty-YN-8ia"/>
@@ -84,10 +78,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="327" height="91"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-7a-MxL">
-                                                    <rect key="frame" x="8" y="8" width="470" height="91"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuT-7a-MxL">
+                                                    <rect key="frame" x="8" y="8" width="70.5" height="37"/>
                                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
-                                                    <color key="textColor" red="0.26597154140472412" green="0.56995230913162231" blue="0.89546698331832886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="shadowColor" red="0.31709900498390198" green="0.43500179052352905" blue="0.81781226396560669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
@@ -108,21 +102,27 @@
                                     <outlet property="delegate" destination="oZV-Kt-2CO" id="EfU-9n-Xvi"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter the names of 4 teams " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
+                                <rect key="frame" x="100" y="325" width="1167" height="38"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Xca-Gj-sfA" firstAttribute="centerY" secondItem="Bz6-qd-L25" secondAttribute="centerY" constant="-8" id="3ie-0H-zJ9"/>
-                            <constraint firstItem="tGp-9W-o3K" firstAttribute="leading" secondItem="3Of-bF-POe" secondAttribute="leading" constant="747" id="50z-6q-gBw"/>
+                            <constraint firstItem="tGp-9W-o3K" firstAttribute="leading" secondItem="3Of-bF-POe" secondAttribute="leading" constant="939" id="50z-6q-gBw"/>
                             <constraint firstItem="6LA-3U-AfU" firstAttribute="centerX" secondItem="DKH-3E-yiQ" secondAttribute="centerX" id="EhK-uK-tnU"/>
                             <constraint firstItem="KKC-f9-bEe" firstAttribute="centerX" secondItem="DKH-3E-yiQ" secondAttribute="centerX" id="GrG-1Z-Vz3"/>
-                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="top" secondItem="3Of-bF-POe" secondAttribute="bottom" constant="26" id="JqV-lN-z6I"/>
+                            <constraint firstItem="Xca-Gj-sfA" firstAttribute="top" secondItem="3Of-bF-POe" secondAttribute="bottom" constant="30" id="JqV-lN-z6I"/>
                             <constraint firstItem="Bz6-qd-L25" firstAttribute="leading" secondItem="DKH-3E-yiQ" secondAttribute="leadingMargin" constant="415" id="Kng-hX-umQ"/>
                             <constraint firstItem="Xca-Gj-sfA" firstAttribute="leading" secondItem="Bz6-qd-L25" secondAttribute="trailing" constant="8" symbolic="YES" id="SJ4-nG-VJF"/>
-                            <constraint firstItem="tGp-9W-o3K" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="top" constant="913" id="Yos-xe-Gs1"/>
-                            <constraint firstItem="3Of-bF-POe" firstAttribute="top" secondItem="KKC-f9-bEe" secondAttribute="bottom" constant="8" id="d4B-fi-VS9"/>
+                            <constraint firstItem="tGp-9W-o3K" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="top" constant="616" id="Yos-xe-Gs1"/>
+                            <constraint firstItem="3Of-bF-POe" firstAttribute="top" secondItem="KKC-f9-bEe" secondAttribute="bottom" constant="75" id="d4B-fi-VS9"/>
                             <constraint firstItem="KKC-f9-bEe" firstAttribute="top" secondItem="DKH-3E-yiQ" secondAttribute="topMargin" constant="28" id="hv9-fK-8Uz"/>
                             <constraint firstItem="Xca-Gj-sfA" firstAttribute="bottom" secondItem="Bz6-qd-L25" secondAttribute="bottom" constant="-8" id="ljX-sb-eCW"/>
-                            <constraint firstItem="6LA-3U-AfU" firstAttribute="top" secondItem="tGp-9W-o3K" secondAttribute="bottom" constant="-423" id="p2K-9e-xpA"/>
+                            <constraint firstItem="6LA-3U-AfU" firstAttribute="top" secondItem="tGp-9W-o3K" secondAttribute="bottom" constant="-126" id="p2K-9e-xpA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Bz6-qd-L25" secondAttribute="trailing" constant="415" id="pHN-vL-g4R"/>
                             <constraint firstItem="KKC-f9-bEe" firstAttribute="centerX" secondItem="3Of-bF-POe" secondAttribute="centerX" id="w97-om-1Yj"/>
                             <constraint firstItem="3Of-bF-POe" firstAttribute="width" secondItem="KKC-f9-bEe" secondAttribute="width" id="zbK-u3-oci"/>

@@ -17,7 +17,7 @@ class AnsweringScreenViewController: UIViewController {
     
     @IBOutlet weak var incorrectButton: UIButton!
     
-    
+    @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var team2Label: UILabel!
     
@@ -29,19 +29,26 @@ class AnsweringScreenViewController: UIViewController {
     
     @IBOutlet weak var popUpLabel: UILabel!
     
+    @IBOutlet weak var wrongGIF: UIImageView!
+    
+    @IBOutlet weak var visualTime: UIProgressView!
+    
+    //let question = AppDelegate.Manager.GetCurrentQuestion()
     var countDownTimer: Timer?
-    var fullTime = 10
-    var timeRemainingInSeconds = 10
+    var animationTimer: Timer?
+    var animationDuration = 2.0
+//    var fullTime: Int = 40
+    var timeRemainingInSeconds = 40
     
     var group1 = Team(name: "Team COJO")
     var group2 = Team(name: "Team X")
     var group3 = Team(name: "Team Echo the Question")
     var group4 = Team(name: "Team KKM")
     
-    var teams : [Team] = []
+    var teams : [Team] = AppDelegate.Manager.gameState.teams
     
-    var numberQuestionAsked: Int = 0
-
+    var questionCount: Int = 0
+    var timeDivide = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +59,13 @@ class AnsweringScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         popUpLabel.layer.backgroundColor = UIColor.white.cgColor
         popUpLabel.layer.cornerRadius = 10;
-//        popUpLabel.textColor = .black
+        questionLabel.text = "fdjksahugvuvubuhbuhbvuhbvuvgyuvguvugvugivuivbhuivbuhivbhuivbuvuyvuvbuybvuiybvuybuyibuybg" //question.text
+        
+       // wrongGIF.isHidden = true
+        
         group1.score = 2200
         group2.score = 1500
-        group3.score = 1750
+        group3.score = 4500
         group4.score = 2050
         
         teams.append(group1)
@@ -63,27 +73,16 @@ class AnsweringScreenViewController: UIViewController {
         teams.append(group3)
         teams.append(group4)
 
-        teams[2].canAnswer = true
+        teams[1].canAnswer = true
         setLabels()
         startQuestion()
         
-//        for group in teams {
-//            if group.canAnswer {
-//                teamHighLight(team: group)
-//            }
-//        }
-//        
-//        self.TimeRemainingLabel.textColor = .white
-//        self.TimeRemainingLabel.text = "\(self.timeRemainingInSeconds) seconds remaining"
-//        
-//
-//        
-//        self.timeRemainingInSeconds = fullTime / (numberQuestionAsked * 2)
-//        self.countDownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.countdownTimerFired), userInfo: nil, repeats: true)
     }
 
     func startQuestion() {
         popUpLabel.isHidden = true
+        animationDuration = 2.0
+        //questionLabel.isHidden = false
         
         for group in teams {
             if group.canAnswer {
@@ -91,11 +90,19 @@ class AnsweringScreenViewController: UIViewController {
                 popUpLabel.text = " Please indicate if \(group.name) answered correctly "
             }
         }
-        var timeDivide = numberQuestionAsked * 2
-        if timeDivide == 0 {
-            timeDivide = 1
+        timeDivide = 1
+        
+        if questionCount != 0 {
+            for _ in 1...questionCount {
+                timeDivide *= 2
+            }
         }
-        self.timeRemainingInSeconds = fullTime / timeDivide
+        if questionCount == 4 {
+            timeRemainingInSeconds = 0
+        } else {
+            self.timeRemainingInSeconds = 60/*question.time*/ / timeDivide
+        }
+        
         self.TimeRemainingLabel.textColor = .white
         self.TimeRemainingLabel.text = "\(timeRemainingInSeconds) seconds remaining"
         
@@ -104,17 +111,19 @@ class AnsweringScreenViewController: UIViewController {
 
 
         self.countDownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.countdownTimerFired), userInfo: nil, repeats: true)
+        
+
     }
     
     func teamHighLight(team: Team) {
         switch team.name {
-        case group1.name:
+        case teams[0].name:
             team1Label.textColor = .white
-        case group2.name:
+        case teams[1].name:
             team2Label.textColor = .white
-        case group3.name:
+        case teams[2].name:
             team3Label.textColor = .white
-        case group4.name:
+        case teams[3].name:
             team4Label.textColor = .white
         default:
             break
@@ -126,13 +135,52 @@ class AnsweringScreenViewController: UIViewController {
         //performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
     }
     
+    
+    
     @IBAction func incorrectPressed(_ sender: Any) {
-        numberQuestionAsked += 1
+        //self.animationTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.animateTimer), userInfo: nil, repeats: true)
+        self.animationTimer?.invalidate()
+        self.animationTimer = nil
+        //wrongGIF.isHidden = true
+        
+        //wrongGIF.loadGif(name: "Wrong")
+        //wrongGIF.isHidden = true
+        chooseGif()
+        questionCount += 1
         self.countDownTimer?.invalidate()
         self.countDownTimer = nil
         startQuestion()
     }
     
+    func chooseGif() {
+        
+        let num1:Int = Int(arc4random_uniform(3))
+        switch num1 {
+        case 0:
+            self.animationTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.animateTimer), userInfo: nil, repeats: true)
+            wrongGIF.loadGif(name: "Wrong")
+            
+        case 1:
+            wrongGIF.loadGif(name: "NotCorrect")
+            self.animationTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.animateTimer), userInfo: nil, repeats: true)
+        case 2:
+            wrongGIF.loadGif(name: "erroneous")
+            self.animationTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(AnsweringScreenViewController.animateTimer), userInfo: nil, repeats: true)
+        default:
+            break
+        }
+        wrongGIF.isHidden = false
+    }
+    
+    func animateTimer() {
+        animationDuration -= 1.0
+        if animationDuration <= 0 {
+            self.animationTimer?.invalidate()
+            self.animationTimer = nil
+            wrongGIF.isHidden = true
+        }
+        
+    }
     
     func setLabels() {
 //        questionLabel.text = ""
@@ -163,23 +211,26 @@ class AnsweringScreenViewController: UIViewController {
             self.countDownTimer?.invalidate()
             self.countDownTimer = nil
             self.TimeRemainingLabel.text = "Time is up"
-            popUpLabel.isHidden = false
+            //if questionCount == 4 {
+                popUpLabel.isHidden = false
+           // }
+            //questionLabel.isHidden = true
         }
         
     }
     
     func updateTimeRemaining() {
         self.TimeRemainingLabel.text = "\(timeRemainingInSeconds) seconds remaining"
-        if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds / 6)) {
+        if (self.timeRemainingInSeconds <= 5) {
             self.TimeRemainingLabel.textColor = .red
         }
-        else if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds / 3)) {
+        else if (self.timeRemainingInSeconds <= 10) {
             self.TimeRemainingLabel.textColor = .orange
         }
-        else if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds / 2)) {
+        else if (self.timeRemainingInSeconds <= 15) {
             self.TimeRemainingLabel.textColor = .yellow
         }
-        else if (self.timeRemainingInSeconds <= Int(timeRemainingInSeconds * 3 / 4)){
+        else if (self.timeRemainingInSeconds <= 30){
             self.TimeRemainingLabel.textColor = .green
         }
         else {
