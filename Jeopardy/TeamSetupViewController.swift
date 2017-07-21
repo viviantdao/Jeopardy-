@@ -97,7 +97,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // we add the animation to the squares 'layer' property
         square.layer.add(anim, forKey: "animate position along path")
         
-        for _ in 0...5 {
+        for _ in 0...3 {
             
             // create a square
             let square = UIView()
@@ -134,7 +134,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // `290` was chosen simply by experimentation
         anim.timeOffset = Double(arc4random_uniform(290))
         
-        for _ in 0...6 {
+        for _ in 0...3 {
             
             // create a square
             let square = UIView()
