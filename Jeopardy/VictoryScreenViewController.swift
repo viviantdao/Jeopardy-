@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class VictoryScreenViewController: UIViewController {
+    
+   
+    @IBOutlet weak var pikachu: UIImageView!
+    
+//    var player:AVAudioPlayer = AVAudioPlayer()
+    @IBOutlet weak var gifView: UIImageView!
     
     @IBOutlet weak var winnerAnnounced: UILabel!
     
@@ -20,19 +27,42 @@ class VictoryScreenViewController: UIViewController {
     
     @IBOutlet weak var fourthPlace: UILabel!
 
-    var sortedTeams:[Team] = []
+    
     let manager = AppDelegate.Manager
+//    var teamInfo:[Team] = []
+    var sortedTeams:[Team] = []
+    
+   override func viewDidLoad() {
+       super.viewDidLoad()
 
+    pikachu.loadGif(name: "pikachu")
+    
+    gifView.loadGif(name: "SpaceGif")
+    
+    
+//        do{
+//            let audioPath = Bundle.main.path(forResource: "Jeopardy Music", ofType: "mp3")
+//            
+//            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+//        }
+//        catch{
+//            
+//        }
+//        player.play()
+   }
+//    
+    
     
     override func viewWillAppear(_ animated: Bool) {
-        // delete later!
+//         delete later!
 //        createTestData()
-        // end delete!
+//         end delete!
         
-        let teams = manager.GetTeamResults()
+       let teams = manager.GetTeamResults()
         sortedTeams = teams.sorted(by: { $0.score > $1.score })
         highScore()
         otherPlaces()
+        
     }
     
     func highScore(){

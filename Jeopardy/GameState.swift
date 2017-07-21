@@ -10,7 +10,7 @@ import Foundation
 
 public struct GameState {
     
-    public fileprivate(set) var teams:[Team] = []
+    public  var teams:[Team] = []
     public fileprivate(set) var currentQuestion:Question? = nil
     public fileprivate(set) var gameOver:Bool = false
     public fileprivate(set) var pickNewQuestion:Bool = false

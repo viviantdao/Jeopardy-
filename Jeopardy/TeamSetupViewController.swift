@@ -25,7 +25,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     
    
     @IBAction func startButtonPressed(_ sender: Any) {
-    let destination = UIStoryboard(name: "AnsweringScreenViewController", bundle: nil).instantiateInitialViewController() as! AnsweringScreenViewController
+    let destination = UIStoryboard(name: "GameScreen", bundle: nil).instantiateInitialViewController() as! GameScreenViewController
         destination.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         jeopardy.startNewGame()
@@ -97,7 +97,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // we add the animation to the squares 'layer' property
         square.layer.add(anim, forKey: "animate position along path")
         
-        for _ in 0...5 {
+        for _ in 0...3 {
             
             // create a square
             let square = UIView()
@@ -134,7 +134,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // `290` was chosen simply by experimentation
         anim.timeOffset = Double(arc4random_uniform(290))
         
-        for _ in 0...6 {
+        for _ in 0...3 {
             
             // create a square
             let square = UIView()
