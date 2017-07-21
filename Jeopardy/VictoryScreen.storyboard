@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="gyparody.ttf">
-            <string>Gyparody</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Victory Screen View Controller-->
         <scene sceneID="sxx-Rb-M9n">
@@ -26,46 +21,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44p-u8-zM2">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1047"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="urb-7U-AaP">
+                                <rect key="frame" x="264" y="907" width="227" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-oE-ZNp">
-                                <rect key="frame" x="658" y="502" width="51.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="662" y="502" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-bU-kvT">
-                                <rect key="frame" x="658" y="356" width="51.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="662" y="356" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-fW-jtC">
-                                <rect key="frame" x="658" y="650" width="51.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lup-T6-nxP">
-                                <rect key="frame" x="489.5" y="162" width="388.5" height="56"/>
-                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="57"/>
+                                <rect key="frame" x="662" y="650" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-X6-gYD">
-                                <rect key="frame" x="658" y="810" width="51.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <rect key="frame" x="662" y="810" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-r9-VU6">
-                                <rect key="frame" x="658" y="300" width="51.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-r9-VU6">
+                                <rect key="frame" x="635" y="252" width="227" height="130"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lup-T6-nxP">
+                                <rect key="frame" x="207" y="28" width="952" height="328"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="97"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.064114481210708618" green="0.18698006868362427" blue="0.72560346126556396" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="lup-T6-nxP" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="142" id="1HF-oR-rRS"/>
+                            <constraint firstItem="lup-T6-nxP" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="8" id="1HF-oR-rRS"/>
                             <constraint firstItem="zWO-bU-kvT" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="2j5-8o-daQ"/>
                             <constraint firstItem="SJ3-fW-jtC" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="630" id="EY4-Eg-f2r"/>
                             <constraint firstItem="Dnb-oE-ZNp" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="VMO-1k-HwH"/>
@@ -81,6 +84,8 @@
                     </view>
                     <connections>
                         <outlet property="fourthPlace" destination="qcs-X6-gYD" id="wc5-YV-XGE"/>
+                        <outlet property="gifView" destination="44p-u8-zM2" id="GSk-y9-OIA"/>
+                        <outlet property="pikachu" destination="urb-7U-AaP" id="fR5-9H-Pfi"/>
                         <outlet property="secondPlace" destination="Dnb-oE-ZNp" id="IvX-8E-rjQ"/>
                         <outlet property="thirdPlace" destination="SJ3-fW-jtC" id="BN4-9I-iSo"/>
                         <outlet property="winnerAnnounced" destination="bgY-r9-VU6" id="x57-ur-oaO"/>
