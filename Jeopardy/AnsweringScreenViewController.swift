@@ -38,8 +38,11 @@ class AnsweringScreenViewController: UIViewController {
     var animationTimer: Timer?
     var animationDuration = 1.0
     
+<<<<<<< HEAD
     var timeRemainingInSeconds = 0
     
+=======
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     var teams : [Team] = AppDelegate.Manager.gameState.teams
     var startTeamIndex = AppDelegate.Manager.gameState.currentTeamIndex
     
@@ -49,8 +52,13 @@ class AnsweringScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
         
         
+=======
+
+
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,7 +66,11 @@ class AnsweringScreenViewController: UIViewController {
         popUpLabel.layer.cornerRadius = 10;
         questionLabel.text = question.text
         timeRemainingInSeconds = question.time
+<<<<<<< HEAD
         
+=======
+       
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         setLabels()
         startQuestion()
         
@@ -68,7 +80,11 @@ class AnsweringScreenViewController: UIViewController {
         popUpLabel.isHidden = true
         animationDuration = 1.0
         teams[AppDelegate.Manager.gameState.currentTeamIndex].canAnswer = true
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         for group in teams {
             if group.canAnswer {
                 teamHighLight(team: group)
@@ -103,6 +119,7 @@ class AnsweringScreenViewController: UIViewController {
         
         print(teams[0].canAnswer)
         print(teams[1].canAnswer)
+<<<<<<< HEAD
         
         print(teams[2].canAnswer)
         
@@ -110,6 +127,15 @@ class AnsweringScreenViewController: UIViewController {
         
         
         
+=======
+
+        print(teams[2].canAnswer)
+
+        print(teams[3].canAnswer)
+
+        
+
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     }
     
     func teamHighLight(team: Team) {
@@ -135,7 +161,11 @@ class AnsweringScreenViewController: UIViewController {
             team1Label.textColor = .black
             
             team2Label.textColor = .black
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
             
             team4Label.textColor = .black
         case teams[3].name:
@@ -145,12 +175,17 @@ class AnsweringScreenViewController: UIViewController {
             team2Label.textColor = .black
             
             team3Label.textColor = .black
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         default:
             break
         }
         //HighLights which team is answering currently
     }
+
     
     
     @IBAction func correctPressed(_ sender: Any) {
@@ -167,8 +202,12 @@ class AnsweringScreenViewController: UIViewController {
     
     @IBAction func incorrectPressed(_ sender: Any) {
         self.animationTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.animateTimer), userInfo: nil, repeats: true)
+<<<<<<< HEAD
         
         teams[AppDelegate.Manager.gameState.currentTeamIndex].canAnswer = false
+=======
+
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         AppDelegate.Manager.gameState.currentTeamIndex = (AppDelegate.Manager.gameState.currentTeamIndex + 1 )%4
         wrongGIF.isHidden = false
         wrongGIF.loadGif(name: "Wrong")
@@ -178,7 +217,11 @@ class AnsweringScreenViewController: UIViewController {
         self.countDownTimer = nil
         startQuestion()
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     
     func animateTimer() {
         animationDuration -= 1.0
