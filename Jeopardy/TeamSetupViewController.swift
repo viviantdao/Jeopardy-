@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
 
     var names: [String] = []
     var jeopardy = AppDelegate.Manager
+    var player: AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var enterTeamName: UITextField!
     @IBOutlet weak var teamTable: UITableView!
@@ -25,7 +27,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     
    
     @IBAction func startButtonPressed(_ sender: Any) {
-    let destination = UIStoryboard(name: "AnsweringScreenViewController", bundle: nil).instantiateInitialViewController() as! AnsweringScreenViewController
+    let destination = UIStoryboard(name: "GameScreen", bundle: nil).instantiateInitialViewController() as! GameScreenViewController
         destination.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         
         jeopardy.startNewGame()
@@ -97,7 +99,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // we add the animation to the squares 'layer' property
         square.layer.add(anim, forKey: "animate position along path")
         
-        for _ in 0...5 {
+        for _ in 0...3 {
             
             // create a square
             let square = UIView()
@@ -134,7 +136,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // `290` was chosen simply by experimentation
         anim.timeOffset = Double(arc4random_uniform(290))
         
-        for _ in 0...6 {
+        for _ in 0...3 {
             
             // create a square
             let square = UIView()
@@ -186,13 +188,29 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
+    
+            
+        do{
+                let audioPath = Bundle.main.path(forResource: "Menu - Star Fox Assault Music Extended", ofType: "mp3")
+                
+                
+                
+                try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+                
+            }
+            
+            catch{
+                
+                
+            }
+            
+            player.play()
+            
+        }
+        
        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
-}
+
