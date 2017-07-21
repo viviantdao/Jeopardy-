@@ -39,7 +39,8 @@ class JeopardyManager {
     
     func GetQuestionFromCategoryQuestionIndex(category: Int, Question:Int)->Question{
         
-        let question = questionRetriever.questionForCategoryBasedOnBsIndexSystemNeedlesslyCouplingImplementations(x: category, y: Question)
+        var question = questionRetriever.questionForCategoryBasedOnBsIndexSystemNeedlesslyCouplingImplementations(x: category, y: Question)
+        question.hasBeenAsked = true
         self.gameState.SetCurrentQuestion(question: question)
         return question
     }
@@ -84,6 +85,11 @@ class JeopardyManager {
         
         return self.gameState.currentQuestion!
         
+    }
+    
+    func GetCurrentTeam()->Team{
+        
+        return self.gameState.currentTeam
     }
 }
 

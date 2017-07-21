@@ -14,6 +14,7 @@ public struct GameState {
     public fileprivate(set) var currentQuestion:Question? = nil
     public fileprivate(set) var gameOver:Bool = false
     public fileprivate(set) var pickNewQuestion:Bool = false
+    public fileprivate(set) var currentTeamIndex = 0
     
     init (teams:[Team], currentQuestion:Question?, gameOver:Bool = false, pickNewQuestion:Bool = false) {
         self.teams = teams
@@ -26,6 +27,12 @@ public struct GameState {
         self.currentQuestion = currentQuestion
         self.gameOver = gameOver
         self.pickNewQuestion = pickNewQuestion
+    }
+    
+    var currentTeam: Team {
+        get {
+            return self.teams[self.currentTeamIndex]
+        }
     }
     
     func StartNewGame(teams: [Team]? = nil)->GameState{
@@ -51,4 +58,6 @@ public struct GameState {
         self.currentQuestion = question
         
     }
+    
+    
 }
