@@ -84,6 +84,10 @@ final class QuestionRetriever: IRetrieveQuestions {
     
     func questionForCategoryBasedOnBsIndexSystemNeedlesslyCouplingImplementations(x:Int, y:Int)->Question{
         let category = self._categories[x]
+        /*
+        let question = self.questions.filter { (question) -> Bool in
+            question.category == category
+        }[y]*/
         
         let question = self.questions.filter { (question) -> Bool in
             question.category == category

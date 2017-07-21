@@ -11,6 +11,10 @@
 		5F2BD41F1F1D3FEB00924750 /* IRetrieveQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2BD41E1F1D3FEB00924750 /* IRetrieveQuestions.swift */; };
 		5F3D6EE51F21907F00941A7B /* Swift+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */; };
 		5F3D6EEF1F227A0500941A7B /* Wrong.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D6EEE1F227A0500941A7B /* Wrong.gif */; };
+<<<<<<< HEAD
+		5F3D6EF11F229ACC00941A7B /* answerspaxce.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D6EF01F229ACC00941A7B /* answerspaxce.gif */; };
+=======
+>>>>>>> master
 		5F4895451F1FDA20008A2A8A /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4895441F1FDA20008A2A8A /* TeamCell.swift */; };
 		5F56D2141F2284F000F544F9 /* Menu - Star Fox Assault Music Extended.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F56D2131F2284F000F544F9 /* Menu - Star Fox Assault Music Extended.mp3 */; };
 		5F56D2161F2292B000F544F9 /* sulekha.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5F56D2151F2292B000F544F9 /* sulekha.gif */; };
@@ -57,6 +61,10 @@
 		5F2BD41E1F1D3FEB00924750 /* IRetrieveQuestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRetrieveQuestions.swift; sourceTree = "<group>"; };
 		5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift+GIF.swift"; sourceTree = "<group>"; };
 		5F3D6EEE1F227A0500941A7B /* Wrong.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Wrong.gif; sourceTree = "<group>"; };
+<<<<<<< HEAD
+		5F3D6EF01F229ACC00941A7B /* answerspaxce.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = answerspaxce.gif; sourceTree = "<group>"; };
+=======
+>>>>>>> master
 		5F4895441F1FDA20008A2A8A /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		5F56D2131F2284F000F544F9 /* Menu - Star Fox Assault Music Extended.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Menu - Star Fox Assault Music Extended.mp3"; path = "../../../../Downloads/Menu - Star Fox Assault Music Extended.mp3"; sourceTree = "<group>"; };
 		5F56D2151F2292B000F544F9 /* sulekha.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sulekha.gif; path = ../../../../Downloads/sulekha.gif; sourceTree = "<group>"; };
@@ -136,7 +144,11 @@
 				A938CC111D47D88E00B8FDEC /* gyparody.ttf */,
 				5F3D6EEE1F227A0500941A7B /* Wrong.gif */,
 				5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */,
+<<<<<<< HEAD
+				5F3D6EF01F229ACC00941A7B /* answerspaxce.gif */,
+=======
 				5F56D2151F2292B000F544F9 /* sulekha.gif */,
+>>>>>>> master
 				A96A37431D338CC30094CE4C /* VictoryScreen */,
 				A96A37421D338CB30094CE4C /* AnsweringScreen */,
 				A96A37411D338CA50094CE4C /* GameScreen */,
@@ -311,6 +323,7 @@
 				5F56D2161F2292B000F544F9 /* sulekha.gif in Resources */,
 				5F56D2141F2284F000F544F9 /* Menu - Star Fox Assault Music Extended.mp3 in Resources */,
 				A96A37141D3365E70094CE4C /* LaunchScreen.storyboard in Resources */,
+				5F3D6EF11F229ACC00941A7B /* answerspaxce.gif in Resources */,
 				A96A374B1D338D310094CE4C /* AnsweringScreen.storyboard in Resources */,
 				A938CC141D47D89700B8FDEC /* QuestionData.plist in Resources */,
 				A96A37451D338CF10094CE4C /* TeamSetupScreen.storyboard in Resources */,
