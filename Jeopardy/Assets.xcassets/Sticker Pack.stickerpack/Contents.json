@@ -1,11 +1,10 @@
 {
   "stickers" : [
     {
-<<<<<<< HEAD
-      "filename" : "Wrong.sticker"
-=======
       "filename" : "SpaceGif.sticker"
->>>>>>> master
+    },
+    {
+      "filename" : "Wrong.sticker"
     }
   ],
   "info" : {
