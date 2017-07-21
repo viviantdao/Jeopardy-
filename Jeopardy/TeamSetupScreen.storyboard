@@ -38,6 +38,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter the names of 4 teams " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
+                                <rect key="frame" x="100" y="325" width="1167" height="38"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LA-3U-AfU">
                                 <rect key="frame" x="652.5" y="890" width="61" height="53"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="34"/>
@@ -102,12 +108,10 @@
                                     <outlet property="delegate" destination="oZV-Kt-2CO" id="EfU-9n-Xvi"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="enter the names of 4 teams " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Of-bF-POe">
-                                <rect key="frame" x="100" y="325" width="1167" height="38"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="32"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-rP-aAs">
+                                <rect key="frame" x="20" y="874" width="134" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -131,6 +135,7 @@
                     <connections>
                         <outlet property="enterTeamName" destination="Bz6-qd-L25" id="1sA-Tb-5AC"/>
                         <outlet property="startGame" destination="6LA-3U-AfU" id="QXr-Mg-ILD"/>
+                        <outlet property="sulekha" destination="2jO-rP-aAs" id="bKX-NG-VlM"/>
                         <outlet property="teamTable" destination="tGp-9W-o3K" id="HP3-1a-8ai"/>
                     </connections>
                 </viewController>
