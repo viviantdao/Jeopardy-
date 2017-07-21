@@ -27,6 +27,8 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func startButtonPressed(_ sender: Any) {
     let destination = UIStoryboard(name: "AnsweringScreenViewController", bundle: nil).instantiateInitialViewController() as! AnsweringScreenViewController
         destination.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        
+        jeopardy.startNewGame()
         self.present(destination, animated: true, completion: nil)
 
     }
