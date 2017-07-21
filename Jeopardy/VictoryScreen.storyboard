@@ -25,36 +25,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="1047"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="urb-7U-AaP">
-                                <rect key="frame" x="264" y="907" width="227" height="117"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-oE-ZNp">
+                                <rect key="frame" x="207" y="748" width="207" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-oE-ZNp">
-                                <rect key="frame" x="662" y="502" width="42" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-bU-kvT">
-                                <rect key="frame" x="662" y="356" width="42" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-fW-jtC">
+                                <rect key="frame" x="595" y="789" width="298" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-fW-jtC">
-                                <rect key="frame" x="662" y="650" width="42" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-X6-gYD">
-                                <rect key="frame" x="662" y="810" width="42" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-r9-VU6">
-                                <rect key="frame" x="635" y="252" width="227" height="130"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-X6-gYD">
+                                <rect key="frame" x="1006" y="789" width="308" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -65,27 +52,40 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-r9-VU6">
+                                <rect key="frame" x="428" y="402" width="867" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmx-RG-rIg">
+                                <rect key="frame" x="44" y="414" width="370" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPa-wZ-LqB">
+                                <rect key="frame" x="925" y="414" width="382" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-bU-kvT">
+                                <rect key="frame" x="595" y="546" width="276" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.064114481210708618" green="0.18698006868362427" blue="0.72560346126556396" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="lup-T6-nxP" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="8" id="1HF-oR-rRS"/>
-                            <constraint firstItem="zWO-bU-kvT" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="2j5-8o-daQ"/>
-                            <constraint firstItem="SJ3-fW-jtC" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="630" id="EY4-Eg-f2r"/>
-                            <constraint firstItem="Dnb-oE-ZNp" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="VMO-1k-HwH"/>
-                            <constraint firstItem="SJ3-fW-jtC" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="ZZe-I7-3wm"/>
-                            <constraint firstItem="qcs-X6-gYD" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="790" id="dmH-78-JVD"/>
-                            <constraint firstItem="bgY-r9-VU6" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="280" id="iBc-On-gMF"/>
                             <constraint firstItem="lup-T6-nxP" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="kKL-bK-DJ9"/>
-                            <constraint firstItem="zWO-bU-kvT" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="336" id="lpe-HK-3lN"/>
-                            <constraint firstItem="qcs-X6-gYD" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="m9B-b9-oBy"/>
-                            <constraint firstItem="Dnb-oE-ZNp" firstAttribute="top" secondItem="PNR-IS-M7q" secondAttribute="bottom" constant="482" id="pjL-Eb-kc7"/>
-                            <constraint firstItem="bgY-r9-VU6" firstAttribute="centerX" secondItem="CsT-0s-1ei" secondAttribute="centerX" id="wmG-yy-eQa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="FireWork1" destination="Dmx-RG-rIg" id="Uiz-E7-YgD"/>
+                        <outlet property="FireWork2" destination="aPa-wZ-LqB" id="LCB-58-wbe"/>
                         <outlet property="fourthPlace" destination="qcs-X6-gYD" id="wc5-YV-XGE"/>
-                        <outlet property="gifView" destination="44p-u8-zM2" id="GSk-y9-OIA"/>
-                        <outlet property="pikachu" destination="urb-7U-AaP" id="fR5-9H-Pfi"/>
+                        <outlet property="gifView" destination="44p-u8-zM2" id="jh2-Up-FD7"/>
                         <outlet property="secondPlace" destination="Dnb-oE-ZNp" id="IvX-8E-rjQ"/>
                         <outlet property="thirdPlace" destination="SJ3-fW-jtC" id="BN4-9I-iSo"/>
                         <outlet property="winnerAnnounced" destination="bgY-r9-VU6" id="x57-ur-oaO"/>

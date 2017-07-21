@@ -11,10 +11,13 @@ import AVFoundation
 
 class VictoryScreenViewController: UIViewController {
     
-   
-    @IBOutlet weak var pikachu: UIImageView!
+    var player:AVAudioPlayer = AVAudioPlayer()
     
-//    var player:AVAudioPlayer = AVAudioPlayer()
+   
+    @IBOutlet weak var FireWork1: UIImageView!
+    
+    @IBOutlet weak var FireWork2: UIImageView!
+    
     @IBOutlet weak var gifView: UIImageView!
     
     @IBOutlet weak var winnerAnnounced: UILabel!
@@ -28,37 +31,43 @@ class VictoryScreenViewController: UIViewController {
     @IBOutlet weak var fourthPlace: UILabel!
 
     
-    let manager = AppDelegate.Manager
+   let manager = AppDelegate.Manager
 //    var teamInfo:[Team] = []
     var sortedTeams:[Team] = []
     
    override func viewDidLoad() {
        super.viewDidLoad()
-
-    pikachu.loadGif(name: "pikachu")
     
+    do{
+        let audioPath = Bundle.main.path(forResource: "Jeopardy Trap Remix", ofType: "mp3")
+        
+        try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
+    }
+    catch{
+        
+    }
+    player.play()
+
     gifView.loadGif(name: "SpaceGif")
     
+    FireWork1.loadGif(name: "fireworks")
     
-//        do{
-//            let audioPath = Bundle.main.path(forResource: "Jeopardy Music", ofType: "mp3")
-//            
-//            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-//        }
-//        catch{
-//            
-//        }
-//        player.play()
-   }
+    FireWork2.loadGif(name: "fireworks")
+    
+    
+    }
+    
+    
+    
 //    
     
     
     override func viewWillAppear(_ animated: Bool) {
 //         delete later!
-//        createTestData()
+//           createTestData()
 //         end delete!
         
-       let teams = manager.GetTeamResults()
+        let teams = manager.GetTeamResults()
         sortedTeams = teams.sorted(by: { $0.score > $1.score })
         highScore()
         otherPlaces()
@@ -67,13 +76,13 @@ class VictoryScreenViewController: UIViewController {
     
     func highScore(){
         winnerAnnounced.text =   "The Winner is: \((sortedTeams[0].name))!"
-        winnerScore.text = "You Scored \((sortedTeams[0].score))"
+        winnerScore.text = "Score: \((sortedTeams[0].score))"
     }
     
     func otherPlaces(){
-        secondPlace.text = "Second place goes to: \((sortedTeams[1].name))"
-        thirdPlace.text = "Third place goes to: \((sortedTeams[2].name))"
-        fourthPlace.text = "Fourth place goes to: \((sortedTeams[3].name))"
+        secondPlace.text = "2nd: \((sortedTeams[1].name))"
+        thirdPlace.text = "3rd: \((sortedTeams[2].name))"
+        fourthPlace.text = "4th: \((sortedTeams[3].name))"
     }
     
 //    func createTestData() {
