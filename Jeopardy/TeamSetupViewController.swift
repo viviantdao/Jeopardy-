@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+
 class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
 
@@ -20,6 +21,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var teamTable: UITableView!
     @IBOutlet weak var startGame: UIButton!
     
+    @IBOutlet weak var sulekha: UIImageView!
     @IBAction func addTeamName(_ sender: Any) {
         jeopardy.AddNewTeam(name: (enterTeamName?.text)!)
         self.enterTeamName?.text = ""
@@ -99,7 +101,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // we add the animation to the squares 'layer' property
         square.layer.add(anim, forKey: "animate position along path")
         
-        for _ in 0...3 {
+        for _ in 0...8 {
             
             // create a square
             let square = UIView()
@@ -136,7 +138,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
         // `290` was chosen simply by experimentation
         anim.timeOffset = Double(arc4random_uniform(290))
         
-        for _ in 0...3 {
+        for _ in 0...8 {
             
             // create a square
             let square = UIView()
@@ -182,6 +184,7 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "space")
