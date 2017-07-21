@@ -51,6 +51,11 @@ class JeopardyManager {
     
     func questionAnswered(_ answeredCorrectly:Bool) {
         
+        if answeredCorrectly {
+            (self.gameState.teams[self.gameState.currentTeamIndex]).score += (self.gameState.currentQuestion?.pointValue)!
+        }
+        
+        
     }
     
     func AddNewTeam(name:String){
@@ -90,6 +95,15 @@ class JeopardyManager {
     func GetCurrentTeam()->Team{
         
         return self.gameState.currentTeam
+    }
+    
+    func GetQuestionPointRange()->[Int]{
+        
+        return self.questionRetriever.getPointRange()
+    }
+    
+    func isGameOver()->Bool{
+        return self.questionRetriever.GetUnansweredQuestions().count == 0
     }
 }
 

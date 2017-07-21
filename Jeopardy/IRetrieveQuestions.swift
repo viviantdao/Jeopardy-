@@ -14,6 +14,10 @@ protocol IRetrieveQuestions{
     
     func questionForCategoryBasedOnBsIndexSystemNeedlesslyCouplingImplementations(x:Int, y:Int)->Question
     
+    func GetUnansweredQuestions()->[Question]
+    
+    func getPointRange()->[Int]
+    
     var countOfQuestions: Int { get }
     
     var categories: [String] { get }
