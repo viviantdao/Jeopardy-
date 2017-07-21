@@ -25,7 +25,11 @@
 	<key>UILaunchStoryboardName</key>
 	<string>TeamSetupScreen</string>
 	<key>UIMainStoryboardFile</key>
+<<<<<<< HEAD
 	<string>TeamSetupScreen</string>
+=======
+	<string>GameScreen</string>
+>>>>>>> e64e79b029871e2dbed6e710d225175bfadc53bb
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
