@@ -10,11 +10,15 @@ import Foundation
 
 public struct GameState {
     
-    public  var teams:[Team] = []
-    public fileprivate(set) var currentQuestion:Question? = nil
+    public var teams:[Team] = []
+    public var currentQuestion:Question? = nil
     public fileprivate(set) var gameOver:Bool = false
     public fileprivate(set) var pickNewQuestion:Bool = false
+<<<<<<< HEAD
+    public var currentTeamIndex:Int = 0
+=======
     public  var currentTeamIndex = 0
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     
     init (teams:[Team], currentQuestion:Question?, gameOver:Bool = false, pickNewQuestion:Bool = false) {
         self.teams = teams

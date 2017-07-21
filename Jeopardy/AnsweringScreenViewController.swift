@@ -10,7 +10,7 @@ import UIKit
 import QuartzCore
 
 class AnsweringScreenViewController: UIViewController {
-
+    
     @IBOutlet weak var TimeRemainingLabel: UILabel!
     
     @IBOutlet weak var correctButton: UIButton!
@@ -37,9 +37,8 @@ class AnsweringScreenViewController: UIViewController {
     var countDownTimer: Timer?
     var animationTimer: Timer?
     var animationDuration = 1.0
-
-    var timeRemainingInSeconds = 0
     
+    var timeRemainingInSeconds = 0
     var teams : [Team] = AppDelegate.Manager.gameState.teams
     var startTeamIndex = AppDelegate.Manager.gameState.currentTeamIndex
     
@@ -49,8 +48,7 @@ class AnsweringScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,17 +56,15 @@ class AnsweringScreenViewController: UIViewController {
         popUpLabel.layer.cornerRadius = 10;
         questionLabel.text = question.text
         timeRemainingInSeconds = question.time
-       
         setLabels()
         startQuestion()
         
     }
-
+    
     func startQuestion() {
         popUpLabel.isHidden = true
         animationDuration = 1.0
         teams[AppDelegate.Manager.gameState.currentTeamIndex].canAnswer = true
-
         for group in teams {
             if group.canAnswer {
                 teamHighLight(team: group)
@@ -95,14 +91,20 @@ class AnsweringScreenViewController: UIViewController {
         self.TimeRemainingLabel.textColor = .white
         self.TimeRemainingLabel.text = "\(timeRemainingInSeconds) seconds remaining"
         
-//        self.view.backgroundColor = .blue
-
-
-
+        //        self.view.backgroundColor = .blue
+        
+        
+        
         self.countDownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.countdownTimerFired), userInfo: nil, repeats: true)
         
         print(teams[0].canAnswer)
         print(teams[1].canAnswer)
+        
+        print(teams[2].canAnswer)
+        
+        print(teams[3].canAnswer)
+        
+        
 
         print(teams[2].canAnswer)
 
@@ -110,6 +112,7 @@ class AnsweringScreenViewController: UIViewController {
 
         
 
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     }
     
     func teamHighLight(team: Team) {
@@ -135,7 +138,11 @@ class AnsweringScreenViewController: UIViewController {
             team1Label.textColor = .black
             
             team2Label.textColor = .black
+<<<<<<< HEAD
+            
+=======
 
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
             
             team4Label.textColor = .black
         case teams[3].name:
@@ -145,13 +152,18 @@ class AnsweringScreenViewController: UIViewController {
             team2Label.textColor = .black
             
             team3Label.textColor = .black
+<<<<<<< HEAD
+            
+=======
 
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         default:
             break
         }
         //HighLights which team is answering currently
     }
 
+    
     
     @IBAction func correctPressed(_ sender: Any) {
         AppDelegate.Manager.questionAnswered(true)
@@ -167,17 +179,26 @@ class AnsweringScreenViewController: UIViewController {
     
     @IBAction func incorrectPressed(_ sender: Any) {
         self.animationTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AnsweringScreenViewController.animateTimer), userInfo: nil, repeats: true)
+<<<<<<< HEAD
+        
+        teams[AppDelegate.Manager.gameState.currentTeamIndex].canAnswer = false
+=======
 
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         AppDelegate.Manager.gameState.currentTeamIndex = (AppDelegate.Manager.gameState.currentTeamIndex + 1 )%4
         wrongGIF.isHidden = false
         wrongGIF.loadGif(name: "Wrong")
-
+        
         questionCount += 1
         self.countDownTimer?.invalidate()
         self.countDownTimer = nil
         startQuestion()
     }
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     
     func animateTimer() {
         animationDuration -= 1.0
@@ -190,7 +211,7 @@ class AnsweringScreenViewController: UIViewController {
     }
     
     func setLabels() {
-//        questionLabel.text = ""
+        //        questionLabel.text = ""
         team1Label.text = "\(teams[0].name): \(teams[0].score)"
         team2Label.text = "\(teams[1].name): \(teams[1].score)"
         team3Label.text = "\(teams[2].name): \(teams[2].score)"
@@ -213,8 +234,8 @@ class AnsweringScreenViewController: UIViewController {
             self.countDownTimer = nil
             self.TimeRemainingLabel.text = "Time is up"
             //if questionCount == 4 {
-                popUpLabel.isHidden = false
-           // }
+            popUpLabel.isHidden = false
+            // }
             //questionLabel.isHidden = true
         }
         
@@ -239,13 +260,13 @@ class AnsweringScreenViewController: UIViewController {
         }
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
