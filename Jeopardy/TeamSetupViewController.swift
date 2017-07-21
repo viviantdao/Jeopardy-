@@ -24,10 +24,8 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
    
-    
-   
     @IBAction func startButtonPressed(_ sender: Any) {
-    let destination = UIStoryboard(name: "GameScreenViewController", bundle: nil).instantiateInitialViewController() as! GameScreenViewController
+    let destination = UIStoryboard(name: "AnsweringScreenViewController", bundle: nil).instantiateInitialViewController() as! AnsweringScreenViewController
         destination.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
         self.present(destination, animated: true, completion: nil)
 
@@ -106,14 +104,14 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
             self.view.addSubview(square)
             
             // randomly create a value between 0.0 and 150.0
-            let randomYOffset = CGFloat( arc4random_uniform(150))
+            let randomYOffset = CGFloat( arc4random_uniform(500))
             
             // for every y-value on the bezier curve
             // add our random y offset so that each individual animation
             // will appear at a different y-position
             let path = UIBezierPath()
             path.move(to: CGPoint(x: 16,y: 239 + randomYOffset))
-            path.addCurve(to: CGPoint(x: 301, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 178, y: 110 + randomYOffset))
+            path.addCurve(to: CGPoint(x: 301, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 136, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 500, y: 110 + randomYOffset))
             
             // create the animation
             let anim = CAKeyframeAnimation(keyPath: "position")
@@ -123,6 +121,43 @@ class TeamSetupViewController: UIViewController, UITableViewDataSource, UITableV
             anim.duration = 8.0
             
             // add the animation 
+            square.layer.add(anim, forKey: "animate position along path")
+        }
+        // ==================================== randomly dispersed squares ==============================
+        // each square will take between 4.0 and 8.0 seconds
+        // to complete one animation loop
+        anim.duration = Double(arc4random_uniform(40)+30) / 10
+        
+        // stagger each animation by a random value
+        // `290` was chosen simply by experimentation
+        anim.timeOffset = Double(arc4random_uniform(290))
+        
+        for _ in 0...6 {
+            
+            // create a square
+            let square = UIView()
+            square.frame = CGRect(x: 55, y: 300, width: 20, height: 20)
+            square.backgroundColor = UIColor.white
+            self.view.addSubview(square)
+            
+            // randomly create a value between 0.0 and 150.0
+            let randomYOffset = CGFloat( arc4random_uniform(500))
+            
+            // for every y-value on the bezier curve
+            // add our random y offset so that each individual animation
+            // will appear at a different y-position
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: 1500,y: 239 + randomYOffset))
+            path.addCurve(to: CGPoint(x: 301, y: 239 + randomYOffset), controlPoint1: CGPoint(x: 170, y: 373 + randomYOffset), controlPoint2: CGPoint(x: 500, y: 110 + randomYOffset))
+            
+            // create the animation
+            let anim = CAKeyframeAnimation(keyPath: "position")
+            anim.path = path.cgPath
+            anim.rotationMode = kCAAnimationRotateAuto
+            anim.repeatCount = Float.infinity
+            anim.duration = 10.0
+            
+            // add the animation
             square.layer.add(anim, forKey: "animate position along path")
         }
         // ==================================== randomly dispersed squares ==============================
