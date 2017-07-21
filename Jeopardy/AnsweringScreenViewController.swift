@@ -38,11 +38,7 @@ class AnsweringScreenViewController: UIViewController {
     var animationTimer: Timer?
     var animationDuration = 1.0
     
-<<<<<<< HEAD
     var timeRemainingInSeconds = 0
-    
-=======
->>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     var teams : [Team] = AppDelegate.Manager.gameState.teams
     var startTeamIndex = AppDelegate.Manager.gameState.currentTeamIndex
     
@@ -52,13 +48,7 @@ class AnsweringScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-<<<<<<< HEAD
         
-        
-=======
-
-
->>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,11 +56,6 @@ class AnsweringScreenViewController: UIViewController {
         popUpLabel.layer.cornerRadius = 10;
         questionLabel.text = question.text
         timeRemainingInSeconds = question.time
-<<<<<<< HEAD
-        
-=======
-       
->>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         setLabels()
         startQuestion()
         
@@ -80,11 +65,6 @@ class AnsweringScreenViewController: UIViewController {
         popUpLabel.isHidden = true
         animationDuration = 1.0
         teams[AppDelegate.Manager.gameState.currentTeamIndex].canAnswer = true
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> aa8cb7eb555d719a0eedcd277ad7420b8e4b9a0e
         for group in teams {
             if group.canAnswer {
                 teamHighLight(team: group)
@@ -119,15 +99,12 @@ class AnsweringScreenViewController: UIViewController {
         
         print(teams[0].canAnswer)
         print(teams[1].canAnswer)
-<<<<<<< HEAD
         
         print(teams[2].canAnswer)
         
         print(teams[3].canAnswer)
         
         
-        
-=======
 
         print(teams[2].canAnswer)
 
