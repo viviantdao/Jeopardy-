@@ -28,11 +28,14 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
     
     var numberOfCategories = AppDelegate.Manager.getCategories().count
     
+    var numberOfquestions = AppDelegate.Manager.getQuestionPerCategoryCount() + 1
+    
     var categories: [String] = AppDelegate.Manager.getCategories()
     
-    var teams:[String] = [] //GET TEAM LIST
+    var teams:[String] = AppDelegate.Manager.GetTeamNames()
     
     var screenWidth = 0
+    var screenHeight = 0
 
     var pressed: [[Bool]] = []
     
@@ -59,13 +62,15 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-
-        // Do any additional setup after loading the view.
+        //check if end game so that we can segue to END GAME screen.
+       
     }
 
     override func viewWillAppear(_ animated: Bool) {
         self.screenWidth = Int(self.collectionView!.frame.width)
+        self.screenHeight = Int(self.collectionView!.frame.height) - 100
+        print(self.screenWidth)
+        print(self.screenHeight)
         
     }
     
@@ -96,13 +101,13 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
     /////QUESTIONS
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return numberOfCategories
+        return numberOfquestions
     }
     
     //SET SIZES FOR CELLS based on category & question numbers
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: (screenWidth/(numberOfCategories)) - Int(Double(screenWidth)*insetRatio) , height: ((screenY-(numberOfCategories))/numberOfCategories) )
+        return CGSize(width: (screenWidth/(numberOfCategories)) - Int(Double(screenWidth)*insetRatio) , height: (((screenHeight)-(numberOfquestions))/numberOfquestions) )
         //(width: (screenX/categories) - Int(Double(screenX)*insetRatio), height: ((screenY-(questions))/questions) - 15)
         
     }
@@ -126,7 +131,18 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
                 label.backgroundColor = .white })
             
         }else{
-            label.text = String(100*(1+indexPath.row))
+            
+            if indexPath.row == 0 {
+                
+                label.text = categories[indexPath.section]
+                
+            }else {
+                
+                label.text = String(100*(indexPath.row))
+                
+
+            }
+            
             
         }
         
@@ -170,7 +186,6 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         
         pressed[x][y] = true
         
-        
         collectionView.reloadItems(at: [indexPath])
         
         
@@ -178,6 +193,8 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
 
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         if (pressed[indexPath.section][indexPath.row]) {
+            return false
+        } else if indexPath.row == 0 {
             return false
         } else {
             return true
