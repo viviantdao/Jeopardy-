@@ -11,7 +11,7 @@ import Foundation
 class JeopardyManager {
     
     private(set) var questionRetriever: IRetrieveQuestions
-    private(set) var gameState: GameState
+    public var gameState: GameState
     private var newTeamAddedHandler: (([String])->Void)?
     
     fileprivate init(path:String) {
