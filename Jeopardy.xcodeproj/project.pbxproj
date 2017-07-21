@@ -10,9 +10,7 @@
 		5F1EAB8A1F1FC9BD0072EDD7 /* JeopardyBuilderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1EAB891F1FC9BD0072EDD7 /* JeopardyBuilderError.swift */; };
 		5F2BD41F1F1D3FEB00924750 /* IRetrieveQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2BD41E1F1D3FEB00924750 /* IRetrieveQuestions.swift */; };
 		5F3D6EE51F21907F00941A7B /* Swift+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */; };
-		5F3D6EE71F21918500941A7B /* Wrong.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D6EE61F21918500941A7B /* Wrong.gif */; };
-		5F3D6EEA1F22646600941A7B /* NotCorrect.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D6EE81F22646600941A7B /* NotCorrect.gif */; };
-		5F3D6EED1F22665400941A7B /* erroneous.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D6EEC1F22665400941A7B /* erroneous.gif */; };
+		5F3D6EEF1F227A0500941A7B /* Wrong.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5F3D6EEE1F227A0500941A7B /* Wrong.gif */; };
 		5F4895451F1FDA20008A2A8A /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4895441F1FDA20008A2A8A /* TeamCell.swift */; };
 		A938CC121D47D88E00B8FDEC /* gyparody.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A938CC111D47D88E00B8FDEC /* gyparody.ttf */; };
 		A938CC141D47D89700B8FDEC /* QuestionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = A938CC131D47D89700B8FDEC /* QuestionData.plist */; };
@@ -56,9 +54,7 @@
 		5F1EAB891F1FC9BD0072EDD7 /* JeopardyBuilderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JeopardyBuilderError.swift; sourceTree = "<group>"; };
 		5F2BD41E1F1D3FEB00924750 /* IRetrieveQuestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRetrieveQuestions.swift; sourceTree = "<group>"; };
 		5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift+GIF.swift"; sourceTree = "<group>"; };
-		5F3D6EE61F21918500941A7B /* Wrong.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Wrong.gif; path = ../../Wrong.gif; sourceTree = "<group>"; };
-		5F3D6EE81F22646600941A7B /* NotCorrect.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = NotCorrect.gif; path = ../../NotCorrect.gif; sourceTree = "<group>"; };
-		5F3D6EEC1F22665400941A7B /* erroneous.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = erroneous.gif; path = ../../erroneous.gif; sourceTree = "<group>"; };
+		5F3D6EEE1F227A0500941A7B /* Wrong.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Wrong.gif; sourceTree = "<group>"; };
 		5F4895441F1FDA20008A2A8A /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		A938CC111D47D88E00B8FDEC /* gyparody.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gyparody.ttf; sourceTree = "<group>"; };
 		A938CC131D47D89700B8FDEC /* QuestionData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionData.plist; sourceTree = "<group>"; };
@@ -133,6 +129,7 @@
 			children = (
 				A938CC131D47D89700B8FDEC /* QuestionData.plist */,
 				A938CC111D47D88E00B8FDEC /* gyparody.ttf */,
+				5F3D6EEE1F227A0500941A7B /* Wrong.gif */,
 				A96A37431D338CC30094CE4C /* VictoryScreen */,
 				A96A37421D338CB30094CE4C /* AnsweringScreen */,
 				A96A37411D338CA50094CE4C /* GameScreen */,
@@ -209,9 +206,6 @@
 				A96A37481D338D250094CE4C /* AnsweringScreenViewController.swift */,
 				A96A374A1D338D310094CE4C /* AnsweringScreen.storyboard */,
 				5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */,
-				5F3D6EE81F22646600941A7B /* NotCorrect.gif */,
-				5F3D6EEC1F22665400941A7B /* erroneous.gif */,
-				5F3D6EE61F21918500941A7B /* Wrong.gif */,
 			);
 			name = AnsweringScreen;
 			sourceTree = "<group>";
@@ -311,14 +305,12 @@
 				A96A37141D3365E70094CE4C /* LaunchScreen.storyboard in Resources */,
 				A96A374B1D338D310094CE4C /* AnsweringScreen.storyboard in Resources */,
 				A938CC141D47D89700B8FDEC /* QuestionData.plist in Resources */,
-				5F3D6EEA1F22646600941A7B /* NotCorrect.gif in Resources */,
 				A96A37451D338CF10094CE4C /* TeamSetupScreen.storyboard in Resources */,
 				A96A37511D338D650094CE4C /* GameScreen.storyboard in Resources */,
 				A96A374D1D338D400094CE4C /* VictoryScreen.storyboard in Resources */,
-				5F3D6EE71F21918500941A7B /* Wrong.gif in Resources */,
+				5F3D6EEF1F227A0500941A7B /* Wrong.gif in Resources */,
 				A96A37111D3365E70094CE4C /* Assets.xcassets in Resources */,
 				A96A370F1D3365E70094CE4C /* Main.storyboard in Resources */,
-				5F3D6EED1F22665400941A7B /* erroneous.gif in Resources */,
 				A938CC121D47D88E00B8FDEC /* gyparody.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
