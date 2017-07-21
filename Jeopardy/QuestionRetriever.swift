@@ -91,4 +91,22 @@ final class QuestionRetriever: IRetrieveQuestions {
         
         return question
     }
+    
+    func getPointRange()->[Int]{
+        let category = self._categories[0]
+        
+        return self.questions.filter { (question) -> Bool in
+            question.category == category
+            }.sorted(by: { (left, right) -> Bool in
+                return left.pointValue < right.pointValue
+            })
+            .reduce([], { (array, question) -> [Int] in
+                return array + [question.pointValue]})
+    }
+    
+    func GetUnansweredQuestions()->[Question]{
+        return self.questions.filter({ (question) -> Bool in
+            !question.hasBeenAsked
+        })
+    }
 }

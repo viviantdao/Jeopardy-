@@ -72,6 +72,13 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         print(self.screenWidth)
         print(self.screenHeight)
         
+        if(AppDelegate.Manager.isGameOver()){
+            let destination = UIStoryboard(name: "VictoryScreen", bundle: nil).instantiateInitialViewController() as! VictoryScreenViewController
+            destination.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(destination, animated: true, completion: nil)
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,6 +124,7 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as UICollectionViewCell
+        let pointArray = AppDelegate.Manager.GetQuestionPointRange()
     
         count += 1
         
@@ -137,8 +145,8 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
                 label.text = categories[indexPath.section]
                 
             }else {
-                
-                label.text = String(100*(indexPath.row))
+                //print((String(indexPath.row))
+                label.text = String(pointArray[indexPath.row-1])
                 
 
             }
@@ -184,9 +192,17 @@ class QuestionsCollectionViewController: UICollectionViewController, UICollectio
         print("[\(x), \(y)]")
         print(pressed[x][y])
         
+        let question = AppDelegate.Manager.GetQuestionFromCategoryQuestionIndex(category: indexPath.section, Question: indexPath.row-1)
+        print(question.text)
         pressed[x][y] = true
         
         collectionView.reloadItems(at: [indexPath])
+        
+        let destination = UIStoryboard(name: "AnsweringScreen", bundle: nil).instantiateInitialViewController() as! AnsweringScreenViewController
+        destination.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(destination, animated: true, completion: nil)
+
+
         
         
     }
