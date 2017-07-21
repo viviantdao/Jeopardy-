@@ -130,6 +130,7 @@
 				A938CC131D47D89700B8FDEC /* QuestionData.plist */,
 				A938CC111D47D88E00B8FDEC /* gyparody.ttf */,
 				5F3D6EEE1F227A0500941A7B /* Wrong.gif */,
+				5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */,
 				A96A37431D338CC30094CE4C /* VictoryScreen */,
 				A96A37421D338CB30094CE4C /* AnsweringScreen */,
 				A96A37411D338CA50094CE4C /* GameScreen */,
@@ -205,7 +206,6 @@
 			children = (
 				A96A37481D338D250094CE4C /* AnsweringScreenViewController.swift */,
 				A96A374A1D338D310094CE4C /* AnsweringScreen.storyboard */,
-				5F3D6EE41F21907F00941A7B /* Swift+GIF.swift */,
 			);
 			name = AnsweringScreen;
 			sourceTree = "<group>";
